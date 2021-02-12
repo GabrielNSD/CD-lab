@@ -1,0 +1,10 @@
+ENTITY Mux2x1 IS
+PORT(A,B,S : IN BIT;
+		X: OUT BIT);
+END Mux2x1;
+
+ARCHITECTURE Behave OF Mux2x1 IS
+	SIGNAL AND1: BIT; --Recebe o sinal da primeira porta AND
+	SIGNAL AND2: BIT; -- Recebe o sinal da segunda porta AND
+	COMPONENT PortaAND IS
+		PORT()
