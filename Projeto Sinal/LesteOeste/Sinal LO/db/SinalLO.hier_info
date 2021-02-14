@@ -1,0 +1,78 @@
+|SinalLO
+a => PortaAnd3pinos:u2.en1
+a => PortaAnd4pinos:u4.en1
+a => PortaAnd4pinos:u5.en1
+a => PortaAnd2pinos:u1.en1
+a => PortaAnd3pinos:u3.en1
+a => PortaAnd4pinos:u6.en1
+b => PortaAnd3pinos:u3.en2
+b => PortaAnd4pinos:u6.en2
+b => PortaAnd2pinos:u1.en2
+b => PortaAnd4pinos:u4.en2
+b => PortaAnd4pinos:u5.en2
+c => PortaAnd3pinos:u2.en2
+c => PortaAnd3pinos:u3.en3
+c => PortaAnd4pinos:u4.en3
+c => PortaAnd4pinos:u5.en3
+c => PortaAnd4pinos:u6.en3
+d => PortaAnd3pinos:u2.en3
+d => PortaAnd4pinos:u5.en4
+d => PortaAnd4pinos:u6.en4
+d => PortaAnd4pinos:u4.en4
+S <= PortaOr6pinos:usaida.sOr
+
+
+|SinalLO|PortaAnd2pinos:u1
+en1 => s0~0.IN0
+en2 => s0~0.IN1
+s0 <= s0~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|SinalLO|PortaAnd3pinos:u2
+en1 => s0~0.IN0
+en2 => s0~0.IN1
+en3 => s0~1.IN1
+s0 <= s0~1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|SinalLO|PortaAnd3pinos:u3
+en1 => s0~0.IN0
+en2 => s0~0.IN1
+en3 => s0~1.IN1
+s0 <= s0~1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|SinalLO|PortaAnd4pinos:u4
+en1 => s0~0.IN0
+en2 => s0~0.IN1
+en3 => s0~1.IN1
+en4 => s0~2.IN1
+s0 <= s0~2.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|SinalLO|PortaAnd4pinos:u5
+en1 => s0~0.IN0
+en2 => s0~0.IN1
+en3 => s0~1.IN1
+en4 => s0~2.IN1
+s0 <= s0~2.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|SinalLO|PortaAnd4pinos:u6
+en1 => s0~0.IN0
+en2 => s0~0.IN1
+en3 => s0~1.IN1
+en4 => s0~2.IN1
+s0 <= s0~2.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|SinalLO|PortaOr6pinos:usaida
+en1 => sOr~0.IN0
+en2 => sOr~0.IN1
+en3 => sOr~1.IN1
+en4 => sOr~2.IN1
+en5 => sOr~3.IN1
+en6 => sOr~4.IN1
+sOr <= sOr~4.DB_MAX_OUTPUT_PORT_TYPE
+
+

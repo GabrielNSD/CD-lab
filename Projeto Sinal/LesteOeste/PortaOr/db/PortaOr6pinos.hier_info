@@ -1,0 +1,10 @@
+|PortaOr6pinos
+en1 => sOr.IN0
+en2 => sOr.IN1
+en3 => sOr.IN1
+en4 => sOr.IN1
+en5 => sOr.IN1
+en6 => sOr.IN1
+sOr <= sOr.DB_MAX_OUTPUT_PORT_TYPE
+
+
