@@ -1,0 +1,32 @@
+|Mux4x1Comp
+e0 => Mux2x1:u1.i0
+e1 => Mux2x1:u1.i1
+e2 => Mux2x1:u2.i0
+e3 => Mux2x1:u2.i1
+se0 => Mux2x1:u1.s0
+se0 => Mux2x1:u2.s0
+se1 => Mux2x1:u3.s0
+sa <= Mux2x1:u3.d
+
+
+|Mux4x1Comp|Mux2x1:u1
+i0 => d~0.DATAB
+i1 => d~0.DATAA
+s0 => d~0.OUTPUTSELECT
+d <= d~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Mux4x1Comp|Mux2x1:u2
+i0 => d~0.DATAB
+i1 => d~0.DATAA
+s0 => d~0.OUTPUTSELECT
+d <= d~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Mux4x1Comp|Mux2x1:u3
+i0 => d~0.DATAB
+i1 => d~0.DATAA
+s0 => d~0.OUTPUTSELECT
+d <= d~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
