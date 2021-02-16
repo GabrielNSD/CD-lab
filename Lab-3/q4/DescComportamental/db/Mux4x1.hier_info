@@ -1,0 +1,11 @@
+|Mux4x1
+e0 => x0.DATAB
+e1 => x0.DATAA
+e2 => x1.DATAB
+e3 => x1.DATAA
+se0 => x1.OUTPUTSELECT
+se0 => x0.OUTPUTSELECT
+se1 => sa~0.OUTPUTSELECT
+sa <= sa~0.DB_MAX_OUTPUT_PORT_TYPE
+
+

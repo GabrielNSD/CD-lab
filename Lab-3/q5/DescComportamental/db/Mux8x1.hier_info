@@ -1,0 +1,17 @@
+|Mux8x1
+en0 => Mux0.IN0
+en1 => Mux0.IN1
+en2 => Mux0.IN2
+en3 => Mux0.IN3
+en4 => Mux1.IN0
+en5 => Mux1.IN1
+en6 => Mux1.IN2
+en7 => Mux1.IN3
+c0 => Mux0.IN5
+c0 => Mux1.IN5
+c1 => Mux0.IN4
+c1 => Mux1.IN4
+c2 => saida~0.OUTPUTSELECT
+saida <= saida~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
