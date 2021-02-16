@@ -1,9 +1,0 @@
-ENTITY PortaAND IS
-	PORT(A,B : IN BIT;
-			S: OUT BIT);
-END PortaAND;
-
-ARCHITECTURE Behave OF PortaAND IS
-BEGIN
-	S <= A AND B;
-END Behave;

@@ -1,24 +1,15 @@
 ENTITY Mux2x1 IS
-PORT(A,B,S : IN BIT;
-		X: OUT BIT);
+	PORT (I0, I1, S0 : IN BIT;
+			O0,O1: BUFFER BIT;
+			OM: OUT BIT
+	);
 END Mux2x1;
 
-ARCHITECTURE Behave OF Mux2x1 IS
-	SIGNAL AND1: BIT; --Recebe o sinal da primeira porta AND
-	SIGNAL AND2: BIT; -- Recebe o sinal da segunda porta AND
-	
-	COMPONENT PortaAND IS
-		PORT(AND_IN_A, AND_IN_B: IN BIT;
-				AND_OUT: OUT BIT);
-	END COMPONENT;
-	
-	COMPONENT PortaOR IS
-		PORT(OR_IN_A,OR_IN_B : IN BIT;
-			OR_OUT: OUT BIT);
-	END COMPONENT;
+ARCHITECTURE behavior of Mux2x1 IS
 
 BEGIN
-u1: PortaAND PORT MAP(AND_IN_A=>A, AND_IN_B=>NOT S,AND_OUT=>AND1);
-u2: PortaAND PORT MAP(AND_IN_A=>B, AND_IN_B=>S,AND_OUT=>AND2);
-u3: PortaOR PORT MAP(OR_IN_A=>AND1,OR_IN_B=>AND2,OR_OUT=>X);
-END;
+	O0 <= I0 AND NOT S0; -- saida da primeira porta and
+	O1 <= I1 AND S0; --saida da segunda porta AND
+	OM <= O0 OR O1; --saida do mux
+END behavior;
+	

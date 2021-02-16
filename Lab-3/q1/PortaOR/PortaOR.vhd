@@ -1,9 +1,0 @@
-ENTITY PortaOR IS
-	PORT(OR_IN_A,OR_IN_B : IN BIT;
-			OR_OUT: OUT BIT);
-END PortaOR;
-
-ARCHITECTURE Behave OF PortaOR IS
-BEGIN 
-	OR_OUT <= OR_IN_A OR OR_IN_B;
-END Behave;
