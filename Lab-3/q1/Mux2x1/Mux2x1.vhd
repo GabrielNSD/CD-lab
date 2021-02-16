@@ -1,0 +1,15 @@
+ENTITY Mux2x1 IS
+	PORT (I0, I1, S0 : IN BIT;
+			O0,O1: BUFFER BIT;
+			OM: OUT BIT
+	);
+END Mux2x1;
+
+ARCHITECTURE behavior of Mux2x1 IS
+
+BEGIN
+	O0 <= I0 AND NOT S0; -- saida da primeira porta and
+	O1 <= I1 AND S0; --saida da segunda porta AND
+	OM <= O0 OR O1; --saida do mux
+END behavior;
+	
