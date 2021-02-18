@@ -47,6 +47,8 @@ u3 : PortaAnd3pinos PORT MAP(en1 => not(a), en2 => b, en3 => c , s0 => S3);
 u4 : PortaAnd4pinos PORT MAP(en1 => a, en2 => not(b), en3 => c , en4 => not(d), s0 => S4); 
 u5 : PortaAnd4pinos PORT MAP(en1 => a, en2 => not(b), en3 => not(c) , en4 => d, s0 => S5);
 u6 : PortaAnd4pinos PORT MAP(en1 => not(a), en2 => b, en3 => not(c) , en4 => d, s0 => S6);
+
+--Segunda Saida--
 u7 : PortaAnd4pinos PORT MAP(en1 => a, en2 => b, en3 => c , en4 => not(d), s0 => S7);
 u8 : PortaAnd4pinos PORT MAP(en1 => a, en2 => b, en3 => not(c) , en4 => d, s0 => S8);
 u9 :PortaAnd3pinos PORT MAP(en1 => a, en2 => not(c), en3 => not(d) , s0 => S9);
