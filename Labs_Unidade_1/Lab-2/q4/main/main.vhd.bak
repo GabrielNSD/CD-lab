@@ -1,0 +1,30 @@
+ENTITY main IS
+PORT(A, B, C : IN BIT;
+		S1, S2 : OUT BIT);
+END main;
+
+ARCHITECTURE behav of main IS
+
+COMPONENT PortaAND_2Entradas IS
+PORT(en1, en2 : IN BIT;
+		s : OUT BIT);
+END COMPONENT;
+COMPONENT PortaAND_3Entradas IS
+PORT(en1, en2, en3 : IN BIT;
+		s : OUT BIT);
+END COMPONENT;
+COMPONENT PortaAND_3Entradas_2NOT IS
+PORT(en1, en2, en3 : IN BIT;
+		s : OUT BIT);
+END COMPONENT;
+COMPONENT PortaOR_3Entradas IS
+PORT(en1, en2, en3 : IN BIT;
+		s : OUT BIT);
+END COMPONENT;
+COMPONENT PortaOR_4Entradas IS
+PORT(en1, en2, en3, en4 : IN BIT;
+		s : OUT BIT);
+END COMPONENT;
+BEGIN
+
+END;

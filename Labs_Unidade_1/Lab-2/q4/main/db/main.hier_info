@@ -1,0 +1,84 @@
+|main
+A => PortaAND_2Entradas:u1.en1
+A => PortaAND_2Entradas:u3.en1
+A => PortaAND_3Entradas_2NOT:u5.en1
+A => PortaAND_3Entradas_2NOT:u6.en1
+A => PortaAND_3Entradas_2NOT:u7.en3
+A => PortaAND_3Entradas:u8.en1
+B => PortaAND_2Entradas:u2.en1
+B => PortaAND_2Entradas:u3.en2
+B => PortaAND_3Entradas_2NOT:u5.en2
+B => PortaAND_3Entradas_2NOT:u6.en3
+B => PortaAND_3Entradas_2NOT:u7.en1
+B => PortaAND_3Entradas:u8.en2
+C => PortaAND_2Entradas:u1.en2
+C => PortaAND_2Entradas:u2.en2
+C => PortaAND_3Entradas_2NOT:u5.en3
+C => PortaAND_3Entradas_2NOT:u6.en2
+C => PortaAND_3Entradas_2NOT:u7.en2
+C => PortaAND_3Entradas:u8.en3
+S1 <= PortaOR_3Entradas:u4.s
+S2 <= PortaOR_4Entradas:u9.s
+
+
+|main|PortaAND_2Entradas:u1
+en1 => s~0.IN0
+en2 => s~0.IN1
+s <= s~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|PortaAND_2Entradas:u2
+en1 => s~0.IN0
+en2 => s~0.IN1
+s <= s~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|PortaAND_2Entradas:u3
+en1 => s~0.IN0
+en2 => s~0.IN1
+s <= s~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|PortaOR_3Entradas:u4
+en1 => s~0.IN0
+en2 => s~0.IN1
+en3 => s~1.IN1
+s <= s~1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|PortaAND_3Entradas_2NOT:u5
+en1 => s~0.IN0
+en2 => s~0.IN1
+en3 => s~1.IN1
+s <= s~1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|PortaAND_3Entradas_2NOT:u6
+en1 => s~0.IN0
+en2 => s~0.IN1
+en3 => s~1.IN1
+s <= s~1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|PortaAND_3Entradas_2NOT:u7
+en1 => s~0.IN0
+en2 => s~0.IN1
+en3 => s~1.IN1
+s <= s~1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|PortaAND_3Entradas:u8
+en1 => s~0.IN0
+en2 => s~0.IN1
+en3 => s~1.IN1
+s <= s~1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|PortaOR_4Entradas:u9
+en1 => s~0.IN0
+en2 => s~0.IN1
+en3 => s~1.IN1
+en4 => s~2.IN1
+s <= s~2.DB_MAX_OUTPUT_PORT_TYPE
+
+
