@@ -16,7 +16,7 @@
 // PROGRAM "Quartus II 64-Bit"
 // VERSION "Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition"
 
-// DATE "02/18/2021 16:46:01"
+// DATE "02/22/2021 23:16:32"
 
 // 
 // Device: Altera EP2C35F672C6 Package FBGA672
@@ -43,12 +43,12 @@ output 	S;
 output 	Sl;
 
 // Design Ports Information
-// S	=>  Location: PIN_C12,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
-// Sl	=>  Location: PIN_C11,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+// S	=>  Location: PIN_B12,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+// Sl	=>  Location: PIN_J11,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
 // c	=>  Location: PIN_C13,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
 // d	=>  Location: PIN_D13,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
-// b	=>  Location: PIN_B11,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
-// a	=>  Location: PIN_B12,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
+// b	=>  Location: PIN_C11,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
+// a	=>  Location: PIN_B11,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
 
 
 wire gnd;
@@ -62,14 +62,51 @@ assign unknown = 1'bx;
 tri1 devclrn;
 tri1 devpor;
 tri1 devoe;
+wire \b~combout ;
 wire \a~combout ;
 wire \c~combout ;
-wire \b~combout ;
 wire \d~combout ;
 wire \usaida1|sOr~0_combout ;
+wire \usaida2|sOr~0_combout ;
 
 
-// Location: PIN_B12,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
+// Location: PIN_C11,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
+cycloneii_io \b~I (
+	.datain(gnd),
+	.oe(gnd),
+	.outclk(gnd),
+	.outclkena(vcc),
+	.inclk(gnd),
+	.inclkena(vcc),
+	.areset(gnd),
+	.sreset(gnd),
+	.differentialin(gnd),
+	.linkin(gnd),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.devoe(devoe),
+	.combout(\b~combout ),
+	.regout(),
+	.differentialout(),
+	.linkout(),
+	.padio(b));
+// synopsys translate_off
+defparam \b~I .input_async_reset = "none";
+defparam \b~I .input_power_up = "low";
+defparam \b~I .input_register_mode = "none";
+defparam \b~I .input_sync_reset = "none";
+defparam \b~I .oe_async_reset = "none";
+defparam \b~I .oe_power_up = "low";
+defparam \b~I .oe_register_mode = "none";
+defparam \b~I .oe_sync_reset = "none";
+defparam \b~I .operation_mode = "input";
+defparam \b~I .output_async_reset = "none";
+defparam \b~I .output_power_up = "low";
+defparam \b~I .output_register_mode = "none";
+defparam \b~I .output_sync_reset = "none";
+// synopsys translate_on
+
+// Location: PIN_B11,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
 cycloneii_io \a~I (
 	.datain(gnd),
 	.oe(gnd),
@@ -141,42 +178,6 @@ defparam \c~I .output_register_mode = "none";
 defparam \c~I .output_sync_reset = "none";
 // synopsys translate_on
 
-// Location: PIN_B11,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
-cycloneii_io \b~I (
-	.datain(gnd),
-	.oe(gnd),
-	.outclk(gnd),
-	.outclkena(vcc),
-	.inclk(gnd),
-	.inclkena(vcc),
-	.areset(gnd),
-	.sreset(gnd),
-	.differentialin(gnd),
-	.linkin(gnd),
-	.devclrn(devclrn),
-	.devpor(devpor),
-	.devoe(devoe),
-	.combout(\b~combout ),
-	.regout(),
-	.differentialout(),
-	.linkout(),
-	.padio(b));
-// synopsys translate_off
-defparam \b~I .input_async_reset = "none";
-defparam \b~I .input_power_up = "low";
-defparam \b~I .input_register_mode = "none";
-defparam \b~I .input_sync_reset = "none";
-defparam \b~I .oe_async_reset = "none";
-defparam \b~I .oe_power_up = "low";
-defparam \b~I .oe_register_mode = "none";
-defparam \b~I .oe_sync_reset = "none";
-defparam \b~I .operation_mode = "input";
-defparam \b~I .output_async_reset = "none";
-defparam \b~I .output_power_up = "low";
-defparam \b~I .output_register_mode = "none";
-defparam \b~I .output_sync_reset = "none";
-// synopsys translate_on
-
 // Location: PIN_D13,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
 cycloneii_io \d~I (
 	.datain(gnd),
@@ -213,24 +214,41 @@ defparam \d~I .output_register_mode = "none";
 defparam \d~I .output_sync_reset = "none";
 // synopsys translate_on
 
-// Location: LCCOMB_X30_Y35_N0
+// Location: LCCOMB_X29_Y35_N0
 cycloneii_lcell_comb \usaida1|sOr~0 (
 // Equation(s):
-// \usaida1|sOr~0_combout  = (\a~combout  & ((\c~combout  & ((\d~combout ) # (!\b~combout ))) # (!\c~combout  & (!\b~combout  & \d~combout )))) # (!\a~combout  & ((\c~combout ) # ((\d~combout ) # (!\b~combout ))))
+// \usaida1|sOr~0_combout  = (\b~combout  & ((\a~combout  & (\c~combout  & \d~combout )) # (!\a~combout  & ((\c~combout ) # (\d~combout ))))) # (!\b~combout  & (((\c~combout ) # (\d~combout )) # (!\a~combout )))
 
-	.dataa(\a~combout ),
-	.datab(\c~combout ),
-	.datac(\b~combout ),
+	.dataa(\b~combout ),
+	.datab(\a~combout ),
+	.datac(\c~combout ),
 	.datad(\d~combout ),
 	.cin(gnd),
 	.combout(\usaida1|sOr~0_combout ),
 	.cout());
 // synopsys translate_off
-defparam \usaida1|sOr~0 .lut_mask = 16'hDF4D;
+defparam \usaida1|sOr~0 .lut_mask = 16'hF771;
 defparam \usaida1|sOr~0 .sum_lutc_input = "datac";
 // synopsys translate_on
 
-// Location: PIN_C12,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+// Location: LCCOMB_X29_Y35_N10
+cycloneii_lcell_comb \usaida2|sOr~0 (
+// Equation(s):
+// \usaida2|sOr~0_combout  = (\b~combout  & ((\a~combout  & ((!\d~combout ) # (!\c~combout ))) # (!\a~combout  & (!\c~combout  & !\d~combout )))) # (!\b~combout  & (\a~combout  & (!\c~combout  & !\d~combout )))
+
+	.dataa(\b~combout ),
+	.datab(\a~combout ),
+	.datac(\c~combout ),
+	.datad(\d~combout ),
+	.cin(gnd),
+	.combout(\usaida2|sOr~0_combout ),
+	.cout());
+// synopsys translate_off
+defparam \usaida2|sOr~0 .lut_mask = 16'h088E;
+defparam \usaida2|sOr~0 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+// Location: PIN_B12,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
 cycloneii_io \S~I (
 	.datain(\usaida1|sOr~0_combout ),
 	.oe(vcc),
@@ -266,9 +284,9 @@ defparam \S~I .output_register_mode = "none";
 defparam \S~I .output_sync_reset = "none";
 // synopsys translate_on
 
-// Location: PIN_C11,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+// Location: PIN_J11,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
 cycloneii_io \Sl~I (
-	.datain(!\usaida1|sOr~0_combout ),
+	.datain(\usaida2|sOr~0_combout ),
 	.oe(vcc),
 	.outclk(gnd),
 	.outclkena(vcc),

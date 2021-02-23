@@ -1,36 +1,28 @@
 |SinalLO
-a => PortaAnd3pinos:u2.en1
-a => PortaAnd4pinos:u4.en1
-a => PortaAnd4pinos:u5.en1
 a => PortaAnd4pinos:u7.en1
 a => PortaAnd4pinos:u8.en1
 a => PortaAnd3pinos:u9.en1
-a => PortaAnd2pinos:u1.en1
-a => PortaAnd3pinos:u3.en1
-a => PortaAnd4pinos:u6.en1
+a => PortaAnd2pinos:u4.en1
+a => PortaAnd2pinos:u5.en1
+a => PortaAnd2pinos:u6.en1
 a => PortaAnd4pinos:u10.en1
-b => PortaAnd3pinos:u3.en2
-b => PortaAnd4pinos:u6.en2
 b => PortaAnd4pinos:u7.en2
 b => PortaAnd4pinos:u8.en2
 b => PortaAnd4pinos:u10.en2
-b => PortaAnd2pinos:u1.en2
-b => PortaAnd4pinos:u4.en2
-b => PortaAnd4pinos:u5.en2
-c => PortaAnd3pinos:u2.en2
-c => PortaAnd3pinos:u3.en3
-c => PortaAnd4pinos:u4.en3
+b => PortaAnd2pinos:u2.en2
+b => PortaAnd2pinos:u3.en1
+b => PortaAnd2pinos:u6.en2
+c => PortaAnd2pinos:u1.en1
+c => PortaAnd2pinos:u2.en1
+c => PortaAnd2pinos:u4.en2
 c => PortaAnd4pinos:u7.en3
-c => PortaAnd4pinos:u5.en3
-c => PortaAnd4pinos:u6.en3
 c => PortaAnd4pinos:u8.en3
 c => PortaAnd3pinos:u9.en2
 c => PortaAnd4pinos:u10.en3
-d => PortaAnd3pinos:u2.en3
-d => PortaAnd4pinos:u5.en4
-d => PortaAnd4pinos:u6.en4
+d => PortaAnd2pinos:u1.en2
+d => PortaAnd2pinos:u3.en2
+d => PortaAnd2pinos:u5.en2
 d => PortaAnd4pinos:u8.en4
-d => PortaAnd4pinos:u4.en4
 d => PortaAnd4pinos:u7.en4
 d => PortaAnd3pinos:u9.en3
 d => PortaAnd4pinos:u10.en4
@@ -44,42 +36,34 @@ en2 => s0~0.IN1
 s0 <= s0~0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|SinalLO|PortaAnd3pinos:u2
+|SinalLO|PortaAnd2pinos:u2
 en1 => s0~0.IN0
 en2 => s0~0.IN1
-en3 => s0~1.IN1
-s0 <= s0~1.DB_MAX_OUTPUT_PORT_TYPE
+s0 <= s0~0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|SinalLO|PortaAnd3pinos:u3
+|SinalLO|PortaAnd2pinos:u3
 en1 => s0~0.IN0
 en2 => s0~0.IN1
-en3 => s0~1.IN1
-s0 <= s0~1.DB_MAX_OUTPUT_PORT_TYPE
+s0 <= s0~0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|SinalLO|PortaAnd4pinos:u4
+|SinalLO|PortaAnd2pinos:u4
 en1 => s0~0.IN0
 en2 => s0~0.IN1
-en3 => s0~1.IN1
-en4 => s0~2.IN1
-s0 <= s0~2.DB_MAX_OUTPUT_PORT_TYPE
+s0 <= s0~0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|SinalLO|PortaAnd4pinos:u5
+|SinalLO|PortaAnd2pinos:u5
 en1 => s0~0.IN0
 en2 => s0~0.IN1
-en3 => s0~1.IN1
-en4 => s0~2.IN1
-s0 <= s0~2.DB_MAX_OUTPUT_PORT_TYPE
+s0 <= s0~0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|SinalLO|PortaAnd4pinos:u6
+|SinalLO|PortaAnd2pinos:u6
 en1 => s0~0.IN0
 en2 => s0~0.IN1
-en3 => s0~1.IN1
-en4 => s0~2.IN1
-s0 <= s0~2.DB_MAX_OUTPUT_PORT_TYPE
+s0 <= s0~0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |SinalLO|PortaAnd4pinos:u7
