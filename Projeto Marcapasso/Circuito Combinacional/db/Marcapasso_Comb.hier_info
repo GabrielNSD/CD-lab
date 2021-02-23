@@ -1,0 +1,29 @@
+|Marcapasso_Comb
+s2 => n2~2.IN0
+s2 => n2~0.IN0
+s2 => n1~0.IN0
+s2 => n0~0.IN0
+s1 => n2~0.IN1
+s1 => n2~2.IN1
+s1 => n1~0.IN1
+s0 => n2~1.IN1
+s0 => n1~1.IN1
+s0 => pv~0.IN1
+s0 => n2~3.IN1
+s0 => n1~5.IN1
+s0 => n0~0.IN1
+s0 => ta~0.IN1
+sa => n1~2.IN1
+za => n1~3.IN1
+za => n0~2.IN1
+sv => n2~4.IN1
+zv => n0~4.IN1
+n2 <= n2~5.DB_MAX_OUTPUT_PORT_TYPE
+n1 <= n1~6.DB_MAX_OUTPUT_PORT_TYPE
+n0 <= n0~5.DB_MAX_OUTPUT_PORT_TYPE
+pa <= n1~5.DB_MAX_OUTPUT_PORT_TYPE
+ta <= ta~0.DB_MAX_OUTPUT_PORT_TYPE
+pv <= pv~0.DB_MAX_OUTPUT_PORT_TYPE
+tv <= n2~1.DB_MAX_OUTPUT_PORT_TYPE
+
+
