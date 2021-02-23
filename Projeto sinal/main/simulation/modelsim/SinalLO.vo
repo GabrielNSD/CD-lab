@@ -16,7 +16,7 @@
 // PROGRAM "Quartus II 64-Bit"
 // VERSION "Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition"
 
-// DATE "02/22/2021 23:16:32"
+// DATE "02/23/2021 17:17:07"
 
 // 
 // Device: Altera EP2C35F672C6 Package FBGA672
@@ -33,18 +33,18 @@ module SinalLO (
 	b,
 	c,
 	d,
-	S,
-	Sl);
+	S_LO,
+	S_NS);
 input 	a;
 input 	b;
 input 	c;
 input 	d;
-output 	S;
-output 	Sl;
+output 	S_LO;
+output 	S_NS;
 
 // Design Ports Information
-// S	=>  Location: PIN_B12,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
-// Sl	=>  Location: PIN_J11,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+// S_LO	=>  Location: PIN_B12,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+// S_NS	=>  Location: PIN_J11,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
 // c	=>  Location: PIN_C13,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
 // d	=>  Location: PIN_D13,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
 // b	=>  Location: PIN_C11,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
@@ -249,7 +249,7 @@ defparam \usaida2|sOr~0 .sum_lutc_input = "datac";
 // synopsys translate_on
 
 // Location: PIN_B12,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
-cycloneii_io \S~I (
+cycloneii_io \S_LO~I (
 	.datain(\usaida1|sOr~0_combout ),
 	.oe(vcc),
 	.outclk(gnd),
@@ -267,25 +267,25 @@ cycloneii_io \S~I (
 	.regout(),
 	.differentialout(),
 	.linkout(),
-	.padio(S));
+	.padio(S_LO));
 // synopsys translate_off
-defparam \S~I .input_async_reset = "none";
-defparam \S~I .input_power_up = "low";
-defparam \S~I .input_register_mode = "none";
-defparam \S~I .input_sync_reset = "none";
-defparam \S~I .oe_async_reset = "none";
-defparam \S~I .oe_power_up = "low";
-defparam \S~I .oe_register_mode = "none";
-defparam \S~I .oe_sync_reset = "none";
-defparam \S~I .operation_mode = "output";
-defparam \S~I .output_async_reset = "none";
-defparam \S~I .output_power_up = "low";
-defparam \S~I .output_register_mode = "none";
-defparam \S~I .output_sync_reset = "none";
+defparam \S_LO~I .input_async_reset = "none";
+defparam \S_LO~I .input_power_up = "low";
+defparam \S_LO~I .input_register_mode = "none";
+defparam \S_LO~I .input_sync_reset = "none";
+defparam \S_LO~I .oe_async_reset = "none";
+defparam \S_LO~I .oe_power_up = "low";
+defparam \S_LO~I .oe_register_mode = "none";
+defparam \S_LO~I .oe_sync_reset = "none";
+defparam \S_LO~I .operation_mode = "output";
+defparam \S_LO~I .output_async_reset = "none";
+defparam \S_LO~I .output_power_up = "low";
+defparam \S_LO~I .output_register_mode = "none";
+defparam \S_LO~I .output_sync_reset = "none";
 // synopsys translate_on
 
 // Location: PIN_J11,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
-cycloneii_io \Sl~I (
+cycloneii_io \S_NS~I (
 	.datain(\usaida2|sOr~0_combout ),
 	.oe(vcc),
 	.outclk(gnd),
@@ -303,21 +303,21 @@ cycloneii_io \Sl~I (
 	.regout(),
 	.differentialout(),
 	.linkout(),
-	.padio(Sl));
+	.padio(S_NS));
 // synopsys translate_off
-defparam \Sl~I .input_async_reset = "none";
-defparam \Sl~I .input_power_up = "low";
-defparam \Sl~I .input_register_mode = "none";
-defparam \Sl~I .input_sync_reset = "none";
-defparam \Sl~I .oe_async_reset = "none";
-defparam \Sl~I .oe_power_up = "low";
-defparam \Sl~I .oe_register_mode = "none";
-defparam \Sl~I .oe_sync_reset = "none";
-defparam \Sl~I .operation_mode = "output";
-defparam \Sl~I .output_async_reset = "none";
-defparam \Sl~I .output_power_up = "low";
-defparam \Sl~I .output_register_mode = "none";
-defparam \Sl~I .output_sync_reset = "none";
+defparam \S_NS~I .input_async_reset = "none";
+defparam \S_NS~I .input_power_up = "low";
+defparam \S_NS~I .input_register_mode = "none";
+defparam \S_NS~I .input_sync_reset = "none";
+defparam \S_NS~I .oe_async_reset = "none";
+defparam \S_NS~I .oe_power_up = "low";
+defparam \S_NS~I .oe_register_mode = "none";
+defparam \S_NS~I .oe_sync_reset = "none";
+defparam \S_NS~I .operation_mode = "output";
+defparam \S_NS~I .output_async_reset = "none";
+defparam \S_NS~I .output_power_up = "low";
+defparam \S_NS~I .output_register_mode = "none";
+defparam \S_NS~I .output_sync_reset = "none";
 // synopsys translate_on
 
 endmodule

@@ -1,5 +1,5 @@
 Simulator report for SinalLO
-Mon Feb 22 23:17:26 2021
+Tue Feb 23 17:19:52 2021
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -47,39 +47,39 @@ applicable agreement for further details.
 ; Simulation End Time         ; 1.0 us       ;
 ; Simulation Netlist Size     ; 31 nodes     ;
 ; Simulation Coverage         ;     100.00 % ;
-; Total Number of Transitions ; 589          ;
+; Total Number of Transitions ; 474          ;
 ; Simulation Breakpoints      ; 0            ;
 ; Family                      ; Cyclone II   ;
 +-----------------------------+--------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Simulator Settings                                                                                                                                                                                   ;
-+--------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------+---------------+
-; Option                                                                                     ; Setting                                                                                 ; Default Value ;
-+--------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------+---------------+
-; Simulation mode                                                                            ; Functional                                                                              ; Timing        ;
-; Start time                                                                                 ; 0 ns                                                                                    ; 0 ns          ;
-; Simulation results format                                                                  ; VWF                                                                                     ;               ;
-; Vector input source                                                                        ; C:/Users/jns44/Desktop/EcT 2021/Circuitos digitais/Lab/Projeto sinal/main/Waveform5.vwf ;               ;
-; Add pins automatically to simulation output waveforms                                      ; On                                                                                      ; On            ;
-; Check outputs                                                                              ; Off                                                                                     ; Off           ;
-; Report simulation coverage                                                                 ; On                                                                                      ; On            ;
-; Display complete 1/0 value coverage report                                                 ; On                                                                                      ; On            ;
-; Display missing 1-value coverage report                                                    ; On                                                                                      ; On            ;
-; Display missing 0-value coverage report                                                    ; On                                                                                      ; On            ;
-; Detect setup and hold time violations                                                      ; Off                                                                                     ; Off           ;
-; Detect glitches                                                                            ; Off                                                                                     ; Off           ;
-; Disable timing delays in Timing Simulation                                                 ; Off                                                                                     ; Off           ;
-; Generate Signal Activity File                                                              ; Off                                                                                     ; Off           ;
-; Generate VCD File for PowerPlay Power Analyzer                                             ; Off                                                                                     ; Off           ;
-; Group bus channels in simulation results                                                   ; Off                                                                                     ; Off           ;
-; Preserve fewer signal transitions to reduce memory requirements                            ; On                                                                                      ; On            ;
-; Trigger vector comparison with the specified mode                                          ; INPUT_EDGE                                                                              ; INPUT_EDGE    ;
-; Disable setup and hold time violations detection in input registers of bi-directional pins ; Off                                                                                     ; Off           ;
-; Overwrite Waveform Inputs With Simulation Outputs                                          ; Off                                                                                     ;               ;
-; Perform Glitch Filtering in Timing Simulation                                              ; Auto                                                                                    ; Auto          ;
-+--------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------+---------------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Simulator Settings                                                                                                                                                                      ;
++--------------------------------------------------------------------------------------------+----------------------------------------------------------------------------+---------------+
+; Option                                                                                     ; Setting                                                                    ; Default Value ;
++--------------------------------------------------------------------------------------------+----------------------------------------------------------------------------+---------------+
+; Simulation mode                                                                            ; Functional                                                                 ; Timing        ;
+; Start time                                                                                 ; 0 ns                                                                       ; 0 ns          ;
+; Simulation results format                                                                  ; VWF                                                                        ;               ;
+; Vector input source                                                                        ; C:/Users/Positivo/Downloads/github/CD-lab/Projeto sinal/main/Waveform6.vwf ;               ;
+; Add pins automatically to simulation output waveforms                                      ; On                                                                         ; On            ;
+; Check outputs                                                                              ; Off                                                                        ; Off           ;
+; Report simulation coverage                                                                 ; On                                                                         ; On            ;
+; Display complete 1/0 value coverage report                                                 ; On                                                                         ; On            ;
+; Display missing 1-value coverage report                                                    ; On                                                                         ; On            ;
+; Display missing 0-value coverage report                                                    ; On                                                                         ; On            ;
+; Detect setup and hold time violations                                                      ; Off                                                                        ; Off           ;
+; Detect glitches                                                                            ; Off                                                                        ; Off           ;
+; Disable timing delays in Timing Simulation                                                 ; Off                                                                        ; Off           ;
+; Generate Signal Activity File                                                              ; Off                                                                        ; Off           ;
+; Generate VCD File for PowerPlay Power Analyzer                                             ; Off                                                                        ; Off           ;
+; Group bus channels in simulation results                                                   ; Off                                                                        ; Off           ;
+; Preserve fewer signal transitions to reduce memory requirements                            ; On                                                                         ; On            ;
+; Trigger vector comparison with the specified mode                                          ; INPUT_EDGE                                                                 ; INPUT_EDGE    ;
+; Disable setup and hold time violations detection in input registers of bi-directional pins ; Off                                                                        ; Off           ;
+; Overwrite Waveform Inputs With Simulation Outputs                                          ; Off                                                                        ;               ;
+; Perform Glitch Filtering in Timing Simulation                                              ; Auto                                                                       ; Auto          ;
++--------------------------------------------------------------------------------------------+----------------------------------------------------------------------------+---------------+
 
 
 +----------------------+
@@ -114,8 +114,8 @@ The following table displays output ports that toggle between 1 and 0 during sim
 ; |SinalLO|b                           ; |SinalLO|b                           ; out              ;
 ; |SinalLO|c                           ; |SinalLO|c                           ; out              ;
 ; |SinalLO|d                           ; |SinalLO|d                           ; out              ;
-; |SinalLO|S                           ; |SinalLO|S                           ; pin_out          ;
-; |SinalLO|Sl                          ; |SinalLO|Sl                          ; pin_out          ;
+; |SinalLO|S_LO                        ; |SinalLO|S_LO                        ; pin_out          ;
+; |SinalLO|S_NS                        ; |SinalLO|S_NS                        ; pin_out          ;
 ; |SinalLO|PortaOr4pinos:usaida2|sOr~0 ; |SinalLO|PortaOr4pinos:usaida2|sOr~0 ; out0             ;
 ; |SinalLO|PortaOr4pinos:usaida2|sOr~1 ; |SinalLO|PortaOr4pinos:usaida2|sOr~1 ; out0             ;
 ; |SinalLO|PortaOr4pinos:usaida2|sOr   ; |SinalLO|PortaOr4pinos:usaida2|sOr   ; out0             ;
@@ -173,19 +173,19 @@ The following table displays output ports that do not toggle to 0 during simulat
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Simulator
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Mon Feb 22 23:17:26 2021
+    Info: Processing started: Tue Feb 23 17:19:49 2021
 Info: Command: quartus_sim --simulation_results_format=VWF SinalLO -c SinalLO
-Info (324025): Using vector source file "C:/Users/jns44/Desktop/EcT 2021/Circuitos digitais/Lab/Projeto sinal/main/Waveform5.vwf"
+Info (324025): Using vector source file "C:/Users/Positivo/Downloads/github/CD-lab/Projeto sinal/main/Waveform6.vwf"
 Info (310003): Option to preserve fewer signal transitions to reduce memory requirements is enabled
     Info (310004): Simulation has been partitioned into sub-simulations according to the maximum transition count determined by the engine. Transitions from memory will be flushed out to disk at the end of each sub-simulation to reduce memory requirements.
 Info (310002): Simulation partitioned into 1 sub-simulations
 Info (328053): Simulation coverage is     100.00 %
-Info (328052): Number of transitions in simulation is 589
+Info (328052): Number of transitions in simulation is 474
 Info (324045): Vector file SinalLO.sim.vwf is saved in VWF text format. You can compress it into CVWF format in order to reduce file size. For more details please refer to the Quartus II Help.
 Info: Quartus II 64-Bit Simulator was successful. 0 errors, 0 warnings
-    Info: Peak virtual memory: 4448 megabytes
-    Info: Processing ended: Mon Feb 22 23:17:26 2021
-    Info: Elapsed time: 00:00:00
-    Info: Total CPU time (on all processors): 00:00:01
+    Info: Peak virtual memory: 4461 megabytes
+    Info: Processing ended: Tue Feb 23 17:19:52 2021
+    Info: Elapsed time: 00:00:03
+    Info: Total CPU time (on all processors): 00:00:02
 
 

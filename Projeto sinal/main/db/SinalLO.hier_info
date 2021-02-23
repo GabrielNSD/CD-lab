@@ -26,8 +26,8 @@ d => PortaAnd4pinos:u8.en4
 d => PortaAnd4pinos:u7.en4
 d => PortaAnd3pinos:u9.en3
 d => PortaAnd4pinos:u10.en4
-S <= PortaOr6pinos:usaida1.sOr
-Sl <= PortaOr4pinos:usaida2.sOr
+S_LO <= PortaOr6pinos:usaida1.sOr
+S_NS <= PortaOr4pinos:usaida2.sOr
 
 
 |SinalLO|PortaAnd2pinos:u1

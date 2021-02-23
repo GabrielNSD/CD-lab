@@ -1,5 +1,5 @@
 Analysis & Synthesis report for SinalLO
-Mon Feb 22 23:16:09 2021
+Tue Feb 23 17:15:39 2021
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -41,7 +41,7 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Mon Feb 22 23:16:08 2021           ;
+; Analysis & Synthesis Status        ; Successful - Tue Feb 23 17:15:39 2021           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; SinalLO                                         ;
 ; Top-level Entity Name              ; SinalLO                                         ;
@@ -154,18 +154,18 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+--------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                              ;
-+----------------------------------+-----------------+-----------------------+----------------------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type             ; File Name with Absolute Path                                                                 ; Library ;
-+----------------------------------+-----------------+-----------------------+----------------------------------------------------------------------------------------------+---------+
-; SinalLO.vhd                      ; yes             ; User VHDL File        ; C:/Users/jns44/Desktop/EcT 2021/Circuitos digitais/Lab/Projeto sinal/main/SinalLO.vhd        ;         ;
-; portaand2pinos.vhd               ; yes             ; Auto-Found VHDL File  ; C:/Users/jns44/Desktop/EcT 2021/Circuitos digitais/Lab/Projeto sinal/main/portaand2pinos.vhd ;         ;
-; portaand4pinos.vhd               ; yes             ; Auto-Found VHDL File  ; C:/Users/jns44/Desktop/EcT 2021/Circuitos digitais/Lab/Projeto sinal/main/portaand4pinos.vhd ;         ;
-; portaand3pinos.vhd               ; yes             ; Auto-Found VHDL File  ; C:/Users/jns44/Desktop/EcT 2021/Circuitos digitais/Lab/Projeto sinal/main/portaand3pinos.vhd ;         ;
-; portaor6pinos.vhd                ; yes             ; Auto-Found VHDL File  ; C:/Users/jns44/Desktop/EcT 2021/Circuitos digitais/Lab/Projeto sinal/main/portaor6pinos.vhd  ;         ;
-; portaor4pinos.vhd                ; yes             ; Auto-Found VHDL File  ; C:/Users/jns44/Desktop/EcT 2021/Circuitos digitais/Lab/Projeto sinal/main/portaor4pinos.vhd  ;         ;
-+----------------------------------+-----------------+-----------------------+----------------------------------------------------------------------------------------------+---------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                 ;
++----------------------------------+-----------------+-----------------------+---------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type             ; File Name with Absolute Path                                                    ; Library ;
++----------------------------------+-----------------+-----------------------+---------------------------------------------------------------------------------+---------+
+; SinalLO.vhd                      ; yes             ; User VHDL File        ; C:/Users/Positivo/Downloads/github/CD-lab/Projeto sinal/main/SinalLO.vhd        ;         ;
+; portaand2pinos.vhd               ; yes             ; Auto-Found VHDL File  ; C:/Users/Positivo/Downloads/github/CD-lab/Projeto sinal/main/portaand2pinos.vhd ;         ;
+; portaand4pinos.vhd               ; yes             ; Auto-Found VHDL File  ; C:/Users/Positivo/Downloads/github/CD-lab/Projeto sinal/main/portaand4pinos.vhd ;         ;
+; portaand3pinos.vhd               ; yes             ; Auto-Found VHDL File  ; C:/Users/Positivo/Downloads/github/CD-lab/Projeto sinal/main/portaand3pinos.vhd ;         ;
+; portaor6pinos.vhd                ; yes             ; Auto-Found VHDL File  ; C:/Users/Positivo/Downloads/github/CD-lab/Projeto sinal/main/portaor6pinos.vhd  ;         ;
+; portaor4pinos.vhd                ; yes             ; Auto-Found VHDL File  ; C:/Users/Positivo/Downloads/github/CD-lab/Projeto sinal/main/portaor4pinos.vhd  ;         ;
++----------------------------------+-----------------+-----------------------+---------------------------------------------------------------------------------+---------+
 
 
 +-----------------------------------------------------+
@@ -230,7 +230,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:01     ;
+; Top            ; 00:00:05     ;
 +----------------+--------------+
 
 
@@ -240,7 +240,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Mon Feb 22 23:16:03 2021
+    Info: Processing started: Tue Feb 23 17:14:52 2021
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off SinalLO -c SinalLO
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 2 design units, including 1 entities, in source file sinallo.vhd
@@ -274,9 +274,9 @@ Info (21057): Implemented 8 device resources after synthesis - the final resourc
     Info (21059): Implemented 2 output pins
     Info (21061): Implemented 2 logic cells
 Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 6 warnings
-    Info: Peak virtual memory: 4650 megabytes
-    Info: Processing ended: Mon Feb 22 23:16:09 2021
-    Info: Elapsed time: 00:00:06
-    Info: Total CPU time (on all processors): 00:00:04
+    Info: Peak virtual memory: 4660 megabytes
+    Info: Processing ended: Tue Feb 23 17:15:39 2021
+    Info: Elapsed time: 00:00:47
+    Info: Total CPU time (on all processors): 00:00:08
 
 

@@ -1,6 +1,6 @@
 ENTITY SinalLO IS
 PORT(a,b,c,d : IN BIT;
-		S, Sl : OUT BIT);
+		S_LO, S_NS : OUT BIT);
 END;
 ARCHITECTURE bevah OF SinalLO IS 
 COMPONENT PortaAnd2pinos IS 
@@ -56,9 +56,7 @@ u8 : PortaAnd4pinos PORT MAP(en1 => a, en2 => b, en3 => not(c) , en4 => d, s0 =>
 u9 :PortaAnd3pinos PORT MAP(en1 => a, en2 => not(c), en3 => not(d) , s0 => S9);
 u10 : PortaAnd4pinos PORT MAP(en1 => not(a), en2 => b, en3 => not(c) , en4 => not(d), s0 => S10);
 
-
-
-usaida1 : portaOr6pinos PORT MAP(en1 => S1, en2 => S2,en3 => S3,en4 => S4,en5 => S5,en6 => S6,sOr => S);
-usaida2 : PortaOr4pinos PORT MAP(en1 => S7, en2 => S8,en3 => s9,en4 => s10,sOr => Sl);
+usaida1 : portaOr6pinos PORT MAP(en1 => S1, en2 => S2,en3 => S3,en4 => S4,en5 => S5,en6 => S6,sOr => S_LO);
+usaida2 : PortaOr4pinos PORT MAP(en1 => S7, en2 => S8,en3 => s9,en4 => s10,sOr => S_NS);
 
 END;
