@@ -1,5 +1,5 @@
 Analysis & Synthesis report for SinalLO
-Thu Feb 18 16:45:42 2021
+Tue Feb 23 17:15:39 2021
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -41,13 +41,13 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Thu Feb 18 16:45:42 2021           ;
+; Analysis & Synthesis Status        ; Successful - Tue Feb 23 17:15:39 2021           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; SinalLO                                         ;
 ; Top-level Entity Name              ; SinalLO                                         ;
 ; Family                             ; Cyclone II                                      ;
-; Total logic elements               ; 1                                               ;
-;     Total combinational functions  ; 1                                               ;
+; Total logic elements               ; 2                                               ;
+;     Total combinational functions  ; 2                                               ;
 ;     Dedicated logic registers      ; 0                                               ;
 ; Total registers                    ; 0                                               ;
 ; Total pins                         ; 6                                               ;
@@ -154,48 +154,48 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+--------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                               ;
-+----------------------------------+-----------------+-----------------------+-----------------------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type             ; File Name with Absolute Path                                                                  ; Library ;
-+----------------------------------+-----------------+-----------------------+-----------------------------------------------------------------------------------------------+---------+
-; SinalLO.vhd                      ; yes             ; User VHDL File        ; C:/Users/jns44/Desktop/EcT 2021/Circuitos digitais/Lab/LesteOeste/Sinal LO/SinalLO.vhd        ;         ;
-; portaand2pinos.vhd               ; yes             ; Auto-Found VHDL File  ; C:/Users/jns44/Desktop/EcT 2021/Circuitos digitais/Lab/LesteOeste/Sinal LO/portaand2pinos.vhd ;         ;
-; portaand3pinos.vhd               ; yes             ; Auto-Found VHDL File  ; C:/Users/jns44/Desktop/EcT 2021/Circuitos digitais/Lab/LesteOeste/Sinal LO/portaand3pinos.vhd ;         ;
-; portaand4pinos.vhd               ; yes             ; Auto-Found VHDL File  ; C:/Users/jns44/Desktop/EcT 2021/Circuitos digitais/Lab/LesteOeste/Sinal LO/portaand4pinos.vhd ;         ;
-; portaor6pinos.vhd                ; yes             ; Auto-Found VHDL File  ; C:/Users/jns44/Desktop/EcT 2021/Circuitos digitais/Lab/LesteOeste/Sinal LO/portaor6pinos.vhd  ;         ;
-; portaor4pinos.vhd                ; yes             ; Auto-Found VHDL File  ; C:/Users/jns44/Desktop/EcT 2021/Circuitos digitais/Lab/LesteOeste/Sinal LO/portaor4pinos.vhd  ;         ;
-+----------------------------------+-----------------+-----------------------+-----------------------------------------------------------------------------------------------+---------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                 ;
++----------------------------------+-----------------+-----------------------+---------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type             ; File Name with Absolute Path                                                    ; Library ;
++----------------------------------+-----------------+-----------------------+---------------------------------------------------------------------------------+---------+
+; SinalLO.vhd                      ; yes             ; User VHDL File        ; C:/Users/Positivo/Downloads/github/CD-lab/Projeto sinal/main/SinalLO.vhd        ;         ;
+; portaand2pinos.vhd               ; yes             ; Auto-Found VHDL File  ; C:/Users/Positivo/Downloads/github/CD-lab/Projeto sinal/main/portaand2pinos.vhd ;         ;
+; portaand4pinos.vhd               ; yes             ; Auto-Found VHDL File  ; C:/Users/Positivo/Downloads/github/CD-lab/Projeto sinal/main/portaand4pinos.vhd ;         ;
+; portaand3pinos.vhd               ; yes             ; Auto-Found VHDL File  ; C:/Users/Positivo/Downloads/github/CD-lab/Projeto sinal/main/portaand3pinos.vhd ;         ;
+; portaor6pinos.vhd                ; yes             ; Auto-Found VHDL File  ; C:/Users/Positivo/Downloads/github/CD-lab/Projeto sinal/main/portaor6pinos.vhd  ;         ;
+; portaor4pinos.vhd                ; yes             ; Auto-Found VHDL File  ; C:/Users/Positivo/Downloads/github/CD-lab/Projeto sinal/main/portaor4pinos.vhd  ;         ;
++----------------------------------+-----------------+-----------------------+---------------------------------------------------------------------------------+---------+
 
 
-+---------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary                               ;
-+---------------------------------------------+-----------------------------+
-; Resource                                    ; Usage                       ;
-+---------------------------------------------+-----------------------------+
-; Estimated Total logic elements              ; 1                           ;
-;                                             ;                             ;
-; Total combinational functions               ; 1                           ;
-; Logic element usage by number of LUT inputs ;                             ;
-;     -- 4 input functions                    ; 1                           ;
-;     -- 3 input functions                    ; 0                           ;
-;     -- <=2 input functions                  ; 0                           ;
-;                                             ;                             ;
-; Logic elements by mode                      ;                             ;
-;     -- normal mode                          ; 1                           ;
-;     -- arithmetic mode                      ; 0                           ;
-;                                             ;                             ;
-; Total registers                             ; 0                           ;
-;     -- Dedicated logic registers            ; 0                           ;
-;     -- I/O registers                        ; 0                           ;
-;                                             ;                             ;
-; I/O pins                                    ; 6                           ;
-; Embedded Multiplier 9-bit elements          ; 0                           ;
-; Maximum fan-out node                        ; PortaOr6pinos:usaida1|sOr~0 ;
-; Maximum fan-out                             ; 2                           ;
-; Total fan-out                               ; 6                           ;
-; Average fan-out                             ; 0.86                        ;
-+---------------------------------------------+-----------------------------+
++-----------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary         ;
++---------------------------------------------+-------+
+; Resource                                    ; Usage ;
++---------------------------------------------+-------+
+; Estimated Total logic elements              ; 2     ;
+;                                             ;       ;
+; Total combinational functions               ; 2     ;
+; Logic element usage by number of LUT inputs ;       ;
+;     -- 4 input functions                    ; 2     ;
+;     -- 3 input functions                    ; 0     ;
+;     -- <=2 input functions                  ; 0     ;
+;                                             ;       ;
+; Logic elements by mode                      ;       ;
+;     -- normal mode                          ; 2     ;
+;     -- arithmetic mode                      ; 0     ;
+;                                             ;       ;
+; Total registers                             ; 0     ;
+;     -- Dedicated logic registers            ; 0     ;
+;     -- I/O registers                        ; 0     ;
+;                                             ;       ;
+; I/O pins                                    ; 6     ;
+; Embedded Multiplier 9-bit elements          ; 0     ;
+; Maximum fan-out node                        ; c     ;
+; Maximum fan-out                             ; 2     ;
+; Total fan-out                               ; 10    ;
+; Average fan-out                             ; 1.25  ;
++---------------------------------------------+-------+
 
 
 +----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -203,7 +203,8 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------+--------------+
 ; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name            ; Library Name ;
 +----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------+--------------+
-; |SinalLO                   ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 6    ; 0            ; |SinalLO                       ; work         ;
+; |SinalLO                   ; 2 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 6    ; 0            ; |SinalLO                       ; work         ;
+;    |PortaOr4pinos:usaida2| ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |SinalLO|PortaOr4pinos:usaida2 ; work         ;
 ;    |PortaOr6pinos:usaida1| ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |SinalLO|PortaOr6pinos:usaida1 ; work         ;
 +----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
@@ -229,7 +230,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:00     ;
+; Top            ; 00:00:05     ;
 +----------------+--------------+
 
 
@@ -239,7 +240,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Thu Feb 18 16:45:38 2021
+    Info: Processing started: Tue Feb 23 17:14:52 2021
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off SinalLO -c SinalLO
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 2 design units, including 1 entities, in source file sinallo.vhd
@@ -250,14 +251,14 @@ Warning (12125): Using design file portaand2pinos.vhd, which is not specified as
     Info (12022): Found design unit 1: PortaAnd2pinos-behav
     Info (12023): Found entity 1: PortaAnd2pinos
 Info (12128): Elaborating entity "PortaAnd2pinos" for hierarchy "PortaAnd2pinos:u1"
-Warning (12125): Using design file portaand3pinos.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
-    Info (12022): Found design unit 1: PortaAnd3pinos-behav
-    Info (12023): Found entity 1: PortaAnd3pinos
-Info (12128): Elaborating entity "PortaAnd3pinos" for hierarchy "PortaAnd3pinos:u2"
 Warning (12125): Using design file portaand4pinos.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
     Info (12022): Found design unit 1: PortaAnd4pinos-behav
     Info (12023): Found entity 1: PortaAnd4pinos
-Info (12128): Elaborating entity "PortaAnd4pinos" for hierarchy "PortaAnd4pinos:u4"
+Info (12128): Elaborating entity "PortaAnd4pinos" for hierarchy "PortaAnd4pinos:u7"
+Warning (12125): Using design file portaand3pinos.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
+    Info (12022): Found design unit 1: PortaAnd3pinos-behav
+    Info (12023): Found entity 1: PortaAnd3pinos
+Info (12128): Elaborating entity "PortaAnd3pinos" for hierarchy "PortaAnd3pinos:u9"
 Warning (12125): Using design file portaor6pinos.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
     Info (12022): Found design unit 1: PortaOr6pinos-behav
     Info (12023): Found entity 1: PortaOr6pinos
@@ -268,14 +269,14 @@ Warning (12125): Using design file portaor4pinos.vhd, which is not specified as 
 Info (12128): Elaborating entity "PortaOr4pinos" for hierarchy "PortaOr4pinos:usaida2"
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 7 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 8 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 4 input pins
     Info (21059): Implemented 2 output pins
-    Info (21061): Implemented 1 logic cells
+    Info (21061): Implemented 2 logic cells
 Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 6 warnings
-    Info: Peak virtual memory: 4650 megabytes
-    Info: Processing ended: Thu Feb 18 16:45:42 2021
-    Info: Elapsed time: 00:00:04
-    Info: Total CPU time (on all processors): 00:00:03
+    Info: Peak virtual memory: 4660 megabytes
+    Info: Processing ended: Tue Feb 23 17:15:39 2021
+    Info: Elapsed time: 00:00:47
+    Info: Total CPU time (on all processors): 00:00:08
 
 
