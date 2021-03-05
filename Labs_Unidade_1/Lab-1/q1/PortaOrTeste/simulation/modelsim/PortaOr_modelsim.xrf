@@ -1,0 +1,13 @@
+vendor_name = ModelSim
+source_file = 1, C:/Users/Gabriel Nogueira/Desktop/quartus/PortaOrTeste/PortaOr.vhd
+source_file = 1, C:/Users/Gabriel Nogueira/Desktop/quartus/PortaOrTeste/Waveform.vwf
+source_file = 1, C:/Users/Gabriel Nogueira/Desktop/quartus/PortaOrTeste/db/PortaOr.cbx.xml
+source_file = 1, c:/altera/13.0sp1/quartus/libraries/vhdl/ieee/prmtvs_b.vhd
+source_file = 1, c:/altera/13.0sp1/quartus/libraries/vhdl/ieee/prmtvs_p.vhd
+source_file = 1, c:/altera/13.0sp1/quartus/libraries/vhdl/ieee/timing_b.vhd
+source_file = 1, c:/altera/13.0sp1/quartus/libraries/vhdl/ieee/timing_p.vhd
+design_name = PortaOr
+instance = comp, \A~I , A, PortaOr, 1
+instance = comp, \B~I , B, PortaOr, 1
+instance = comp, \S~0 , S~0, PortaOr, 1
+instance = comp, \S~I , S, PortaOr, 1

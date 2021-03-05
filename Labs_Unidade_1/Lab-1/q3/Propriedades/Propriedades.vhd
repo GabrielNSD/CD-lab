@@ -1,0 +1,26 @@
+ENTITY Propriedades IS
+PORT (A, B, C : IN BIT;
+		S1, S2, S3, S4, S5, S6, S7, S8, S9, S10, S11, S12, S13, S14, S15, S16, S17, S18, S19: OUT BIT);
+END Propriedades;
+ARCHITECTURE comp OF Propriedades IS
+BEGIN
+S1 <= A or '0'; -- A+0
+S2 <= A and '1'; -- A*1
+S3 <= not(not(A)); -- (A')'
+S4 <= A or B; -- A+B
+S5 <= B or A; -- B+A
+S6 <= A and B; -- A*B
+S7 <= B and A; -- B*A
+S8 <= A or (B or C); -- A+(B+C)
+S9 <= (A or B) or C; -- (A+B)+C
+S10 <= A and (B and C); -- A*(B*C)
+S11 <= (A and B) and C; -- (A*B)*C
+S12 <= A and (B or C); -- A*(B+C)
+S13 <= (A and B) or (A and C); -- A*B + A*C
+S14 <= A or (B and C); -- A+(B*C)
+S15 <= (A or B) and (A or C); -- (A+B)*(A+C)
+S16 <= not(A and B); -- (A*B)'
+S17 <= not(A) or not(B); -- A'+B'
+S18 <= not(A or B); -- (A+B)'
+S19 <= not(A) and not(B); -- A'*B'
+end comp; 

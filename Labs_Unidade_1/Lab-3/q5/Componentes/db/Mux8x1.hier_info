@@ -1,0 +1,88 @@
+|Mux8x1
+en0 => Mux4x1Comp:u1.e0
+en1 => Mux4x1Comp:u1.e1
+en2 => Mux4x1Comp:u1.e2
+en3 => Mux4x1Comp:u1.e3
+en4 => Mux4x1Comp:u2.e0
+en5 => Mux4x1Comp:u2.e1
+en6 => Mux4x1Comp:u2.e2
+en7 => Mux4x1Comp:u2.e3
+c0 => Mux4x1Comp:u1.se0
+c0 => Mux4x1Comp:u2.se0
+c1 => Mux4x1Comp:u1.se1
+c1 => Mux4x1Comp:u2.se1
+c2 => Mux2x1:u3.s0
+saida <= Mux2x1:u3.d
+
+
+|Mux8x1|Mux4x1Comp:u1
+e0 => Mux2x1:u1.i0
+e1 => Mux2x1:u1.i1
+e2 => Mux2x1:u2.i0
+e3 => Mux2x1:u2.i1
+se0 => Mux2x1:u1.s0
+se0 => Mux2x1:u2.s0
+se1 => Mux2x1:u3.s0
+sa <= Mux2x1:u3.d
+
+
+|Mux8x1|Mux4x1Comp:u1|Mux2x1:u1
+i0 => d~0.DATAB
+i1 => d~0.DATAA
+s0 => d~0.OUTPUTSELECT
+d <= d~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Mux8x1|Mux4x1Comp:u1|Mux2x1:u2
+i0 => d~0.DATAB
+i1 => d~0.DATAA
+s0 => d~0.OUTPUTSELECT
+d <= d~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Mux8x1|Mux4x1Comp:u1|Mux2x1:u3
+i0 => d~0.DATAB
+i1 => d~0.DATAA
+s0 => d~0.OUTPUTSELECT
+d <= d~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Mux8x1|Mux4x1Comp:u2
+e0 => Mux2x1:u1.i0
+e1 => Mux2x1:u1.i1
+e2 => Mux2x1:u2.i0
+e3 => Mux2x1:u2.i1
+se0 => Mux2x1:u1.s0
+se0 => Mux2x1:u2.s0
+se1 => Mux2x1:u3.s0
+sa <= Mux2x1:u3.d
+
+
+|Mux8x1|Mux4x1Comp:u2|Mux2x1:u1
+i0 => d~0.DATAB
+i1 => d~0.DATAA
+s0 => d~0.OUTPUTSELECT
+d <= d~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Mux8x1|Mux4x1Comp:u2|Mux2x1:u2
+i0 => d~0.DATAB
+i1 => d~0.DATAA
+s0 => d~0.OUTPUTSELECT
+d <= d~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Mux8x1|Mux4x1Comp:u2|Mux2x1:u3
+i0 => d~0.DATAB
+i1 => d~0.DATAA
+s0 => d~0.OUTPUTSELECT
+d <= d~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Mux8x1|Mux2x1:u3
+i0 => d~0.DATAB
+i1 => d~0.DATAA
+s0 => d~0.OUTPUTSELECT
+d <= d~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
