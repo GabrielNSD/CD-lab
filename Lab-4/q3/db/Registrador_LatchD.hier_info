@@ -1,0 +1,55 @@
+|Registrador_LatchD
+I0 => LatchD:u4.D
+I1 => LatchD:u3.D
+I2 => LatchD:u2.D
+I3 => LatchD:u1.D
+c => LatchD:u1.clk
+c => LatchD:u2.clk
+c => LatchD:u3.clk
+c => LatchD:u4.clk
+Q0 <= LatchD:u4.Q
+Q1 <= LatchD:u3.Q
+Q2 <= LatchD:u2.Q
+Q3 <= LatchD:u1.Q
+Qbarra0 <= LatchD:u4.Qbarra
+Qbarra1 <= LatchD:u3.Qbarra
+Qbarra2 <= LatchD:u2.Qbarra
+Qbarra3 <= LatchD:u1.Qbarra
+
+
+|Registrador_LatchD|LatchD:u1
+D => process_0~1.IN0
+D => process_0~0.IN0
+clk => process_0~0.IN1
+clk => process_0~1.IN1
+Q <= Q$latch.DB_MAX_OUTPUT_PORT_TYPE
+Qbarra <= Qbarra$latch.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Registrador_LatchD|LatchD:u2
+D => process_0~1.IN0
+D => process_0~0.IN0
+clk => process_0~0.IN1
+clk => process_0~1.IN1
+Q <= Q$latch.DB_MAX_OUTPUT_PORT_TYPE
+Qbarra <= Qbarra$latch.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Registrador_LatchD|LatchD:u3
+D => process_0~1.IN0
+D => process_0~0.IN0
+clk => process_0~0.IN1
+clk => process_0~1.IN1
+Q <= Q$latch.DB_MAX_OUTPUT_PORT_TYPE
+Qbarra <= Qbarra$latch.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Registrador_LatchD|LatchD:u4
+D => process_0~1.IN0
+D => process_0~0.IN0
+clk => process_0~0.IN1
+clk => process_0~1.IN1
+Q <= Q$latch.DB_MAX_OUTPUT_PORT_TYPE
+Qbarra <= Qbarra$latch.DB_MAX_OUTPUT_PORT_TYPE
+
+

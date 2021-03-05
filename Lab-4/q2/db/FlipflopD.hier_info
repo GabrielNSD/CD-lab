@@ -1,0 +1,7 @@
+|FlipflopD
+D => Q~0.OUTPUTSELECT
+D => Q~1.OUTPUTSELECT
+clk => Q~reg0.CLK
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+

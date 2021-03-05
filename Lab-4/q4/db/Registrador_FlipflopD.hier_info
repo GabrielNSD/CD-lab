@@ -1,0 +1,43 @@
+|Registrador_FlipflopD
+I0 => FlipflopD:u4.D
+I1 => FlipflopD:u3.D
+I2 => FlipflopD:u2.D
+I3 => FlipflopD:u1.D
+c => FlipflopD:u1.clk
+c => FlipflopD:u2.clk
+c => FlipflopD:u3.clk
+c => FlipflopD:u4.clk
+Q0 <= FlipflopD:u4.Q
+Q1 <= FlipflopD:u3.Q
+Q2 <= FlipflopD:u2.Q
+Q3 <= FlipflopD:u1.Q
+
+
+|Registrador_FlipflopD|FlipflopD:u1
+D => Q~0.OUTPUTSELECT
+D => Q~1.OUTPUTSELECT
+clk => Q~reg0.CLK
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Registrador_FlipflopD|FlipflopD:u2
+D => Q~0.OUTPUTSELECT
+D => Q~1.OUTPUTSELECT
+clk => Q~reg0.CLK
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Registrador_FlipflopD|FlipflopD:u3
+D => Q~0.OUTPUTSELECT
+D => Q~1.OUTPUTSELECT
+clk => Q~reg0.CLK
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Registrador_FlipflopD|FlipflopD:u4
+D => Q~0.OUTPUTSELECT
+D => Q~1.OUTPUTSELECT
+clk => Q~reg0.CLK
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
