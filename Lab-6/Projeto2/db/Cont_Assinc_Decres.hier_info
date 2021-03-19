@@ -1,0 +1,60 @@
+|Cont_Assinc_Decres
+clk => FlipflopJK:u1.C
+Q0 <= FlipflopJK:u1.Qbarra
+Q1 <= FlipflopJK:u2.Qbarra
+Q2 <= FlipflopJK:u3.Qbarra
+Q3 <= FlipflopJK:u4.Qbarra
+
+
+|Cont_Assinc_Decres|FlipflopJK:u1
+J => process_0~0.IN0
+J => process_0~2.IN0
+J => process_0~1.IN0
+K => process_0~1.IN1
+K => process_0~2.IN1
+K => process_0~0.IN1
+C => xbarra.CLK
+C => x.CLK
+Q <= x.DB_MAX_OUTPUT_PORT_TYPE
+Qbarra <= xbarra.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Cont_Assinc_Decres|FlipflopJK:u2
+J => process_0~0.IN0
+J => process_0~2.IN0
+J => process_0~1.IN0
+K => process_0~1.IN1
+K => process_0~2.IN1
+K => process_0~0.IN1
+C => xbarra.CLK
+C => x.CLK
+Q <= x.DB_MAX_OUTPUT_PORT_TYPE
+Qbarra <= xbarra.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Cont_Assinc_Decres|FlipflopJK:u3
+J => process_0~0.IN0
+J => process_0~2.IN0
+J => process_0~1.IN0
+K => process_0~1.IN1
+K => process_0~2.IN1
+K => process_0~0.IN1
+C => xbarra.CLK
+C => x.CLK
+Q <= x.DB_MAX_OUTPUT_PORT_TYPE
+Qbarra <= xbarra.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Cont_Assinc_Decres|FlipflopJK:u4
+J => process_0~0.IN0
+J => process_0~2.IN0
+J => process_0~1.IN0
+K => process_0~1.IN1
+K => process_0~2.IN1
+K => process_0~0.IN1
+C => xbarra.CLK
+C => x.CLK
+Q <= x.DB_MAX_OUTPUT_PORT_TYPE
+Qbarra <= xbarra.DB_MAX_OUTPUT_PORT_TYPE
+
+

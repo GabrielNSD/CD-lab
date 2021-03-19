@@ -1,0 +1,786 @@
+TimeQuest Timing Analyzer report for Cont_Assinc_Decres
+Fri Mar 19 14:55:22 2021
+Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. TimeQuest Timing Analyzer Summary
+  3. Parallel Compilation
+  4. Clocks
+  5. Slow Model Fmax Summary
+  6. Slow Model Setup Summary
+  7. Slow Model Hold Summary
+  8. Slow Model Recovery Summary
+  9. Slow Model Removal Summary
+ 10. Slow Model Minimum Pulse Width Summary
+ 11. Slow Model Setup: 'FlipflopJK:u1|x'
+ 12. Slow Model Setup: 'FlipflopJK:u2|x'
+ 13. Slow Model Setup: 'FlipflopJK:u3|x'
+ 14. Slow Model Setup: 'clk'
+ 15. Slow Model Hold: 'clk'
+ 16. Slow Model Hold: 'FlipflopJK:u2|x'
+ 17. Slow Model Hold: 'FlipflopJK:u1|x'
+ 18. Slow Model Hold: 'FlipflopJK:u3|x'
+ 19. Slow Model Minimum Pulse Width: 'clk'
+ 20. Slow Model Minimum Pulse Width: 'FlipflopJK:u1|x'
+ 21. Slow Model Minimum Pulse Width: 'FlipflopJK:u2|x'
+ 22. Slow Model Minimum Pulse Width: 'FlipflopJK:u3|x'
+ 23. Clock to Output Times
+ 24. Minimum Clock to Output Times
+ 25. Fast Model Setup Summary
+ 26. Fast Model Hold Summary
+ 27. Fast Model Recovery Summary
+ 28. Fast Model Removal Summary
+ 29. Fast Model Minimum Pulse Width Summary
+ 30. Fast Model Setup: 'FlipflopJK:u1|x'
+ 31. Fast Model Setup: 'FlipflopJK:u2|x'
+ 32. Fast Model Setup: 'FlipflopJK:u3|x'
+ 33. Fast Model Setup: 'clk'
+ 34. Fast Model Hold: 'clk'
+ 35. Fast Model Hold: 'FlipflopJK:u2|x'
+ 36. Fast Model Hold: 'FlipflopJK:u1|x'
+ 37. Fast Model Hold: 'FlipflopJK:u3|x'
+ 38. Fast Model Minimum Pulse Width: 'clk'
+ 39. Fast Model Minimum Pulse Width: 'FlipflopJK:u1|x'
+ 40. Fast Model Minimum Pulse Width: 'FlipflopJK:u2|x'
+ 41. Fast Model Minimum Pulse Width: 'FlipflopJK:u3|x'
+ 42. Clock to Output Times
+ 43. Minimum Clock to Output Times
+ 44. Multicorner Timing Analysis Summary
+ 45. Clock to Output Times
+ 46. Minimum Clock to Output Times
+ 47. Setup Transfers
+ 48. Hold Transfers
+ 49. Report TCCS
+ 50. Report RSKM
+ 51. Unconstrained Paths
+ 52. TimeQuest Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++----------------------------------------------------------------------------------------+
+; TimeQuest Timing Analyzer Summary                                                      ;
++--------------------+-------------------------------------------------------------------+
+; Quartus II Version ; Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition ;
+; Revision Name      ; Cont_Assinc_Decres                                                ;
+; Device Family      ; Cyclone II                                                        ;
+; Device Name        ; EP2C35F672C6                                                      ;
+; Timing Models      ; Final                                                             ;
+; Delay Model        ; Combined                                                          ;
+; Rise/Fall Delays   ; Unavailable                                                       ;
++--------------------+-------------------------------------------------------------------+
+
+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 4      ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clocks                                                                                                                                                                                           ;
++-----------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+---------------------+
+; Clock Name      ; Type ; Period ; Frequency  ; Rise  ; Fall  ; Duty Cycle ; Divide by ; Multiply by ; Phase ; Offset ; Edge List ; Edge Shift ; Inverted ; Master ; Source ; Targets             ;
++-----------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+---------------------+
+; clk             ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { clk }             ;
+; FlipflopJK:u1|x ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { FlipflopJK:u1|x } ;
+; FlipflopJK:u2|x ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { FlipflopJK:u2|x } ;
+; FlipflopJK:u3|x ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { FlipflopJK:u3|x } ;
++-----------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+---------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------+
+; Slow Model Fmax Summary                                                                                         ;
++-------------+-----------------+-----------------+---------------------------------------------------------------+
+; Fmax        ; Restricted Fmax ; Clock Name      ; Note                                                          ;
++-------------+-----------------+-----------------+---------------------------------------------------------------+
+; 1610.31 MHz ; 500.0 MHz       ; FlipflopJK:u1|x ; limit due to low minimum pulse width violation (tcl)          ;
+; 1610.31 MHz ; 500.0 MHz       ; FlipflopJK:u2|x ; limit due to low minimum pulse width violation (tcl)          ;
+; 1610.31 MHz ; 500.0 MHz       ; FlipflopJK:u3|x ; limit due to low minimum pulse width violation (tcl)          ;
+; 1610.31 MHz ; 420.17 MHz      ; clk             ; limit due to minimum period restriction (max I/O toggle rate) ;
++-------------+-----------------+-----------------+---------------------------------------------------------------+
+This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
+
+
++-----------------------------------------+
+; Slow Model Setup Summary                ;
++-----------------+-------+---------------+
+; Clock           ; Slack ; End Point TNS ;
++-----------------+-------+---------------+
+; FlipflopJK:u1|x ; 0.379 ; 0.000         ;
+; FlipflopJK:u2|x ; 0.379 ; 0.000         ;
+; FlipflopJK:u3|x ; 0.379 ; 0.000         ;
+; clk             ; 0.379 ; 0.000         ;
++-----------------+-------+---------------+
+
+
++------------------------------------------+
+; Slow Model Hold Summary                  ;
++-----------------+--------+---------------+
+; Clock           ; Slack  ; End Point TNS ;
++-----------------+--------+---------------+
+; clk             ; -2.548 ; -2.548        ;
+; FlipflopJK:u2|x ; -2.057 ; -2.057        ;
+; FlipflopJK:u1|x ; -2.010 ; -2.010        ;
+; FlipflopJK:u3|x ; 0.391  ; 0.000         ;
++-----------------+--------+---------------+
+
+
+-------------------------------
+; Slow Model Recovery Summary ;
+-------------------------------
+No paths to report.
+
+
+------------------------------
+; Slow Model Removal Summary ;
+------------------------------
+No paths to report.
+
+
++------------------------------------------+
+; Slow Model Minimum Pulse Width Summary   ;
++-----------------+--------+---------------+
+; Clock           ; Slack  ; End Point TNS ;
++-----------------+--------+---------------+
+; clk             ; -1.380 ; -3.380        ;
+; FlipflopJK:u1|x ; -0.500 ; -2.000        ;
+; FlipflopJK:u2|x ; -0.500 ; -2.000        ;
+; FlipflopJK:u3|x ; -0.500 ; -1.000        ;
++-----------------+--------+---------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Setup: 'FlipflopJK:u1|x'                                                                                              ;
++-------+----------------------+----------------------+-----------------+-----------------+--------------+------------+------------+
+; Slack ; From Node            ; To Node              ; Launch Clock    ; Latch Clock     ; Relationship ; Clock Skew ; Data Delay ;
++-------+----------------------+----------------------+-----------------+-----------------+--------------+------------+------------+
+; 0.379 ; FlipflopJK:u2|xbarra ; FlipflopJK:u2|xbarra ; FlipflopJK:u1|x ; FlipflopJK:u1|x ; 1.000        ; 0.000      ; 0.657      ;
+; 2.280 ; FlipflopJK:u2|x      ; FlipflopJK:u2|x      ; FlipflopJK:u2|x ; FlipflopJK:u1|x ; 0.500        ; 2.151      ; 0.657      ;
+; 2.780 ; FlipflopJK:u2|x      ; FlipflopJK:u2|x      ; FlipflopJK:u2|x ; FlipflopJK:u1|x ; 1.000        ; 2.151      ; 0.657      ;
++-------+----------------------+----------------------+-----------------+-----------------+--------------+------------+------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Setup: 'FlipflopJK:u2|x'                                                                                              ;
++-------+----------------------+----------------------+-----------------+-----------------+--------------+------------+------------+
+; Slack ; From Node            ; To Node              ; Launch Clock    ; Latch Clock     ; Relationship ; Clock Skew ; Data Delay ;
++-------+----------------------+----------------------+-----------------+-----------------+--------------+------------+------------+
+; 0.379 ; FlipflopJK:u3|xbarra ; FlipflopJK:u3|xbarra ; FlipflopJK:u2|x ; FlipflopJK:u2|x ; 1.000        ; 0.000      ; 0.657      ;
+; 2.327 ; FlipflopJK:u3|x      ; FlipflopJK:u3|x      ; FlipflopJK:u3|x ; FlipflopJK:u2|x ; 0.500        ; 2.198      ; 0.657      ;
+; 2.827 ; FlipflopJK:u3|x      ; FlipflopJK:u3|x      ; FlipflopJK:u3|x ; FlipflopJK:u2|x ; 1.000        ; 2.198      ; 0.657      ;
++-------+----------------------+----------------------+-----------------+-----------------+--------------+------------+------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Setup: 'FlipflopJK:u3|x'                                                                                              ;
++-------+----------------------+----------------------+-----------------+-----------------+--------------+------------+------------+
+; Slack ; From Node            ; To Node              ; Launch Clock    ; Latch Clock     ; Relationship ; Clock Skew ; Data Delay ;
++-------+----------------------+----------------------+-----------------+-----------------+--------------+------------+------------+
+; 0.379 ; FlipflopJK:u4|xbarra ; FlipflopJK:u4|xbarra ; FlipflopJK:u3|x ; FlipflopJK:u3|x ; 1.000        ; 0.000      ; 0.657      ;
++-------+----------------------+----------------------+-----------------+-----------------+--------------+------------+------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Setup: 'clk'                                                                                                      ;
++-------+----------------------+----------------------+-----------------+-------------+--------------+------------+------------+
+; Slack ; From Node            ; To Node              ; Launch Clock    ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+----------------------+----------------------+-----------------+-------------+--------------+------------+------------+
+; 0.379 ; FlipflopJK:u1|xbarra ; FlipflopJK:u1|xbarra ; clk             ; clk         ; 1.000        ; 0.000      ; 0.657      ;
+; 2.818 ; FlipflopJK:u1|x      ; FlipflopJK:u1|x      ; FlipflopJK:u1|x ; clk         ; 0.500        ; 2.689      ; 0.657      ;
+; 3.318 ; FlipflopJK:u1|x      ; FlipflopJK:u1|x      ; FlipflopJK:u1|x ; clk         ; 1.000        ; 2.689      ; 0.657      ;
++-------+----------------------+----------------------+-----------------+-------------+--------------+------------+------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Hold: 'clk'                                                                                                        ;
++--------+----------------------+----------------------+-----------------+-------------+--------------+------------+------------+
+; Slack  ; From Node            ; To Node              ; Launch Clock    ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+----------------------+----------------------+-----------------+-------------+--------------+------------+------------+
+; -2.548 ; FlipflopJK:u1|x      ; FlipflopJK:u1|x      ; FlipflopJK:u1|x ; clk         ; 0.000        ; 2.689      ; 0.657      ;
+; -2.048 ; FlipflopJK:u1|x      ; FlipflopJK:u1|x      ; FlipflopJK:u1|x ; clk         ; -0.500       ; 2.689      ; 0.657      ;
+; 0.391  ; FlipflopJK:u1|xbarra ; FlipflopJK:u1|xbarra ; clk             ; clk         ; 0.000        ; 0.000      ; 0.657      ;
++--------+----------------------+----------------------+-----------------+-------------+--------------+------------+------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Hold: 'FlipflopJK:u2|x'                                                                                                ;
++--------+----------------------+----------------------+-----------------+-----------------+--------------+------------+------------+
+; Slack  ; From Node            ; To Node              ; Launch Clock    ; Latch Clock     ; Relationship ; Clock Skew ; Data Delay ;
++--------+----------------------+----------------------+-----------------+-----------------+--------------+------------+------------+
+; -2.057 ; FlipflopJK:u3|x      ; FlipflopJK:u3|x      ; FlipflopJK:u3|x ; FlipflopJK:u2|x ; 0.000        ; 2.198      ; 0.657      ;
+; -1.557 ; FlipflopJK:u3|x      ; FlipflopJK:u3|x      ; FlipflopJK:u3|x ; FlipflopJK:u2|x ; -0.500       ; 2.198      ; 0.657      ;
+; 0.391  ; FlipflopJK:u3|xbarra ; FlipflopJK:u3|xbarra ; FlipflopJK:u2|x ; FlipflopJK:u2|x ; 0.000        ; 0.000      ; 0.657      ;
++--------+----------------------+----------------------+-----------------+-----------------+--------------+------------+------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Hold: 'FlipflopJK:u1|x'                                                                                                ;
++--------+----------------------+----------------------+-----------------+-----------------+--------------+------------+------------+
+; Slack  ; From Node            ; To Node              ; Launch Clock    ; Latch Clock     ; Relationship ; Clock Skew ; Data Delay ;
++--------+----------------------+----------------------+-----------------+-----------------+--------------+------------+------------+
+; -2.010 ; FlipflopJK:u2|x      ; FlipflopJK:u2|x      ; FlipflopJK:u2|x ; FlipflopJK:u1|x ; 0.000        ; 2.151      ; 0.657      ;
+; -1.510 ; FlipflopJK:u2|x      ; FlipflopJK:u2|x      ; FlipflopJK:u2|x ; FlipflopJK:u1|x ; -0.500       ; 2.151      ; 0.657      ;
+; 0.391  ; FlipflopJK:u2|xbarra ; FlipflopJK:u2|xbarra ; FlipflopJK:u1|x ; FlipflopJK:u1|x ; 0.000        ; 0.000      ; 0.657      ;
++--------+----------------------+----------------------+-----------------+-----------------+--------------+------------+------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Hold: 'FlipflopJK:u3|x'                                                                                               ;
++-------+----------------------+----------------------+-----------------+-----------------+--------------+------------+------------+
+; Slack ; From Node            ; To Node              ; Launch Clock    ; Latch Clock     ; Relationship ; Clock Skew ; Data Delay ;
++-------+----------------------+----------------------+-----------------+-----------------+--------------+------------+------------+
+; 0.391 ; FlipflopJK:u4|xbarra ; FlipflopJK:u4|xbarra ; FlipflopJK:u3|x ; FlipflopJK:u3|x ; 0.000        ; 0.000      ; 0.657      ;
++-------+----------------------+----------------------+-----------------+-----------------+--------------+------------+------------+
+
+
++-------------------------------------------------------------------------------------------------------+
+; Slow Model Minimum Pulse Width: 'clk'                                                                 ;
++--------+--------------+----------------+------------------+-------+------------+----------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock ; Clock Edge ; Target               ;
++--------+--------------+----------------+------------------+-------+------------+----------------------+
+; -1.380 ; 1.000        ; 2.380          ; Port Rate        ; clk   ; Rise       ; clk                  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Fall       ; FlipflopJK:u1|x      ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Fall       ; FlipflopJK:u1|x      ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Fall       ; FlipflopJK:u1|xbarra ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Fall       ; FlipflopJK:u1|xbarra ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; clk|combout          ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; clk|combout          ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; clk~clkctrl|inclk[0] ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; clk~clkctrl|inclk[0] ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; clk~clkctrl|outclk   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; clk~clkctrl|outclk   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; u1|xbarra|clk        ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; u1|xbarra|clk        ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; u1|x|clk             ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; u1|x|clk             ;
++--------+--------------+----------------+------------------+-------+------------+----------------------+
+
+
++------------------------------------------------------------------------------------------------------------------+
+; Slow Model Minimum Pulse Width: 'FlipflopJK:u1|x'                                                                ;
++--------+--------------+----------------+------------------+-----------------+------------+-----------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock           ; Clock Edge ; Target                ;
++--------+--------------+----------------+------------------+-----------------+------------+-----------------------+
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; FlipflopJK:u1|x ; Fall       ; FlipflopJK:u2|x       ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; FlipflopJK:u1|x ; Fall       ; FlipflopJK:u2|x       ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; FlipflopJK:u1|x ; Fall       ; FlipflopJK:u2|xbarra  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; FlipflopJK:u1|x ; Fall       ; FlipflopJK:u2|xbarra  ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; FlipflopJK:u1|x ; Rise       ; u1|x|regout           ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; FlipflopJK:u1|x ; Rise       ; u1|x|regout           ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; FlipflopJK:u1|x ; Rise       ; u1|x~clkctrl|inclk[0] ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; FlipflopJK:u1|x ; Rise       ; u1|x~clkctrl|inclk[0] ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; FlipflopJK:u1|x ; Rise       ; u1|x~clkctrl|outclk   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; FlipflopJK:u1|x ; Rise       ; u1|x~clkctrl|outclk   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; FlipflopJK:u1|x ; Rise       ; u2|xbarra|clk         ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; FlipflopJK:u1|x ; Rise       ; u2|xbarra|clk         ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; FlipflopJK:u1|x ; Rise       ; u2|x|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; FlipflopJK:u1|x ; Rise       ; u2|x|clk              ;
++--------+--------------+----------------+------------------+-----------------+------------+-----------------------+
+
+
++------------------------------------------------------------------------------------------------------------------+
+; Slow Model Minimum Pulse Width: 'FlipflopJK:u2|x'                                                                ;
++--------+--------------+----------------+------------------+-----------------+------------+-----------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock           ; Clock Edge ; Target                ;
++--------+--------------+----------------+------------------+-----------------+------------+-----------------------+
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; FlipflopJK:u2|x ; Fall       ; FlipflopJK:u3|x       ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; FlipflopJK:u2|x ; Fall       ; FlipflopJK:u3|x       ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; FlipflopJK:u2|x ; Fall       ; FlipflopJK:u3|xbarra  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; FlipflopJK:u2|x ; Fall       ; FlipflopJK:u3|xbarra  ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; FlipflopJK:u2|x ; Rise       ; u2|x|regout           ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; FlipflopJK:u2|x ; Rise       ; u2|x|regout           ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; FlipflopJK:u2|x ; Rise       ; u2|x~clkctrl|inclk[0] ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; FlipflopJK:u2|x ; Rise       ; u2|x~clkctrl|inclk[0] ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; FlipflopJK:u2|x ; Rise       ; u2|x~clkctrl|outclk   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; FlipflopJK:u2|x ; Rise       ; u2|x~clkctrl|outclk   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; FlipflopJK:u2|x ; Rise       ; u3|xbarra|clk         ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; FlipflopJK:u2|x ; Rise       ; u3|xbarra|clk         ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; FlipflopJK:u2|x ; Rise       ; u3|x|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; FlipflopJK:u2|x ; Rise       ; u3|x|clk              ;
++--------+--------------+----------------+------------------+-----------------+------------+-----------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------+
+; Slow Model Minimum Pulse Width: 'FlipflopJK:u3|x'                                                               ;
++--------+--------------+----------------+------------------+-----------------+------------+----------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock           ; Clock Edge ; Target               ;
++--------+--------------+----------------+------------------+-----------------+------------+----------------------+
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; FlipflopJK:u3|x ; Fall       ; FlipflopJK:u4|xbarra ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; FlipflopJK:u3|x ; Fall       ; FlipflopJK:u4|xbarra ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; FlipflopJK:u3|x ; Rise       ; u3|x|regout          ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; FlipflopJK:u3|x ; Rise       ; u3|x|regout          ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; FlipflopJK:u3|x ; Rise       ; u4|xbarra|clk        ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; FlipflopJK:u3|x ; Rise       ; u4|xbarra|clk        ;
++--------+--------------+----------------+------------------+-----------------+------------+----------------------+
+
+
++----------------------------------------------------------------------------+
+; Clock to Output Times                                                      ;
++-----------+-----------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port      ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+-----------------+-------+-------+------------+-----------------+
+; Q1        ; FlipflopJK:u1|x ; 5.572 ; 5.572 ; Fall       ; FlipflopJK:u1|x ;
+; Q2        ; FlipflopJK:u2|x ; 5.611 ; 5.611 ; Fall       ; FlipflopJK:u2|x ;
+; Q3        ; FlipflopJK:u3|x ; 4.238 ; 4.238 ; Fall       ; FlipflopJK:u3|x ;
+; Q0        ; clk             ; 6.398 ; 6.398 ; Fall       ; clk             ;
++-----------+-----------------+-------+-------+------------+-----------------+
+
+
++----------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                              ;
++-----------+-----------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port      ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+-----------------+-------+-------+------------+-----------------+
+; Q1        ; FlipflopJK:u1|x ; 5.572 ; 5.572 ; Fall       ; FlipflopJK:u1|x ;
+; Q2        ; FlipflopJK:u2|x ; 5.611 ; 5.611 ; Fall       ; FlipflopJK:u2|x ;
+; Q3        ; FlipflopJK:u3|x ; 4.238 ; 4.238 ; Fall       ; FlipflopJK:u3|x ;
+; Q0        ; clk             ; 6.398 ; 6.398 ; Fall       ; clk             ;
++-----------+-----------------+-------+-------+------------+-----------------+
+
+
++-----------------------------------------+
+; Fast Model Setup Summary                ;
++-----------------+-------+---------------+
+; Clock           ; Slack ; End Point TNS ;
++-----------------+-------+---------------+
+; FlipflopJK:u1|x ; 0.665 ; 0.000         ;
+; FlipflopJK:u2|x ; 0.665 ; 0.000         ;
+; FlipflopJK:u3|x ; 0.665 ; 0.000         ;
+; clk             ; 0.665 ; 0.000         ;
++-----------------+-------+---------------+
+
+
++------------------------------------------+
+; Fast Model Hold Summary                  ;
++-----------------+--------+---------------+
+; Clock           ; Slack  ; End Point TNS ;
++-----------------+--------+---------------+
+; clk             ; -1.591 ; -1.591        ;
+; FlipflopJK:u2|x ; -1.300 ; -1.300        ;
+; FlipflopJK:u1|x ; -1.266 ; -1.266        ;
+; FlipflopJK:u3|x ; 0.215  ; 0.000         ;
++-----------------+--------+---------------+
+
+
+-------------------------------
+; Fast Model Recovery Summary ;
+-------------------------------
+No paths to report.
+
+
+------------------------------
+; Fast Model Removal Summary ;
+------------------------------
+No paths to report.
+
+
++------------------------------------------+
+; Fast Model Minimum Pulse Width Summary   ;
++-----------------+--------+---------------+
+; Clock           ; Slack  ; End Point TNS ;
++-----------------+--------+---------------+
+; clk             ; -1.380 ; -3.380        ;
+; FlipflopJK:u1|x ; -0.500 ; -2.000        ;
+; FlipflopJK:u2|x ; -0.500 ; -2.000        ;
+; FlipflopJK:u3|x ; -0.500 ; -1.000        ;
++-----------------+--------+---------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Setup: 'FlipflopJK:u1|x'                                                                                              ;
++-------+----------------------+----------------------+-----------------+-----------------+--------------+------------+------------+
+; Slack ; From Node            ; To Node              ; Launch Clock    ; Latch Clock     ; Relationship ; Clock Skew ; Data Delay ;
++-------+----------------------+----------------------+-----------------+-----------------+--------------+------------+------------+
+; 0.665 ; FlipflopJK:u2|xbarra ; FlipflopJK:u2|xbarra ; FlipflopJK:u1|x ; FlipflopJK:u1|x ; 1.000        ; 0.000      ; 0.367      ;
+; 1.646 ; FlipflopJK:u2|x      ; FlipflopJK:u2|x      ; FlipflopJK:u2|x ; FlipflopJK:u1|x ; 0.500        ; 1.340      ; 0.367      ;
+; 2.146 ; FlipflopJK:u2|x      ; FlipflopJK:u2|x      ; FlipflopJK:u2|x ; FlipflopJK:u1|x ; 1.000        ; 1.340      ; 0.367      ;
++-------+----------------------+----------------------+-----------------+-----------------+--------------+------------+------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Setup: 'FlipflopJK:u2|x'                                                                                              ;
++-------+----------------------+----------------------+-----------------+-----------------+--------------+------------+------------+
+; Slack ; From Node            ; To Node              ; Launch Clock    ; Latch Clock     ; Relationship ; Clock Skew ; Data Delay ;
++-------+----------------------+----------------------+-----------------+-----------------+--------------+------------+------------+
+; 0.665 ; FlipflopJK:u3|xbarra ; FlipflopJK:u3|xbarra ; FlipflopJK:u2|x ; FlipflopJK:u2|x ; 1.000        ; 0.000      ; 0.367      ;
+; 1.680 ; FlipflopJK:u3|x      ; FlipflopJK:u3|x      ; FlipflopJK:u3|x ; FlipflopJK:u2|x ; 0.500        ; 1.374      ; 0.367      ;
+; 2.180 ; FlipflopJK:u3|x      ; FlipflopJK:u3|x      ; FlipflopJK:u3|x ; FlipflopJK:u2|x ; 1.000        ; 1.374      ; 0.367      ;
++-------+----------------------+----------------------+-----------------+-----------------+--------------+------------+------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Setup: 'FlipflopJK:u3|x'                                                                                              ;
++-------+----------------------+----------------------+-----------------+-----------------+--------------+------------+------------+
+; Slack ; From Node            ; To Node              ; Launch Clock    ; Latch Clock     ; Relationship ; Clock Skew ; Data Delay ;
++-------+----------------------+----------------------+-----------------+-----------------+--------------+------------+------------+
+; 0.665 ; FlipflopJK:u4|xbarra ; FlipflopJK:u4|xbarra ; FlipflopJK:u3|x ; FlipflopJK:u3|x ; 1.000        ; 0.000      ; 0.367      ;
++-------+----------------------+----------------------+-----------------+-----------------+--------------+------------+------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Setup: 'clk'                                                                                                      ;
++-------+----------------------+----------------------+-----------------+-------------+--------------+------------+------------+
+; Slack ; From Node            ; To Node              ; Launch Clock    ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+----------------------+----------------------+-----------------+-------------+--------------+------------+------------+
+; 0.665 ; FlipflopJK:u1|xbarra ; FlipflopJK:u1|xbarra ; clk             ; clk         ; 1.000        ; 0.000      ; 0.367      ;
+; 1.971 ; FlipflopJK:u1|x      ; FlipflopJK:u1|x      ; FlipflopJK:u1|x ; clk         ; 0.500        ; 1.665      ; 0.367      ;
+; 2.471 ; FlipflopJK:u1|x      ; FlipflopJK:u1|x      ; FlipflopJK:u1|x ; clk         ; 1.000        ; 1.665      ; 0.367      ;
++-------+----------------------+----------------------+-----------------+-------------+--------------+------------+------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Hold: 'clk'                                                                                                        ;
++--------+----------------------+----------------------+-----------------+-------------+--------------+------------+------------+
+; Slack  ; From Node            ; To Node              ; Launch Clock    ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+----------------------+----------------------+-----------------+-------------+--------------+------------+------------+
+; -1.591 ; FlipflopJK:u1|x      ; FlipflopJK:u1|x      ; FlipflopJK:u1|x ; clk         ; 0.000        ; 1.665      ; 0.367      ;
+; -1.091 ; FlipflopJK:u1|x      ; FlipflopJK:u1|x      ; FlipflopJK:u1|x ; clk         ; -0.500       ; 1.665      ; 0.367      ;
+; 0.215  ; FlipflopJK:u1|xbarra ; FlipflopJK:u1|xbarra ; clk             ; clk         ; 0.000        ; 0.000      ; 0.367      ;
++--------+----------------------+----------------------+-----------------+-------------+--------------+------------+------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Hold: 'FlipflopJK:u2|x'                                                                                                ;
++--------+----------------------+----------------------+-----------------+-----------------+--------------+------------+------------+
+; Slack  ; From Node            ; To Node              ; Launch Clock    ; Latch Clock     ; Relationship ; Clock Skew ; Data Delay ;
++--------+----------------------+----------------------+-----------------+-----------------+--------------+------------+------------+
+; -1.300 ; FlipflopJK:u3|x      ; FlipflopJK:u3|x      ; FlipflopJK:u3|x ; FlipflopJK:u2|x ; 0.000        ; 1.374      ; 0.367      ;
+; -0.800 ; FlipflopJK:u3|x      ; FlipflopJK:u3|x      ; FlipflopJK:u3|x ; FlipflopJK:u2|x ; -0.500       ; 1.374      ; 0.367      ;
+; 0.215  ; FlipflopJK:u3|xbarra ; FlipflopJK:u3|xbarra ; FlipflopJK:u2|x ; FlipflopJK:u2|x ; 0.000        ; 0.000      ; 0.367      ;
++--------+----------------------+----------------------+-----------------+-----------------+--------------+------------+------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Hold: 'FlipflopJK:u1|x'                                                                                                ;
++--------+----------------------+----------------------+-----------------+-----------------+--------------+------------+------------+
+; Slack  ; From Node            ; To Node              ; Launch Clock    ; Latch Clock     ; Relationship ; Clock Skew ; Data Delay ;
++--------+----------------------+----------------------+-----------------+-----------------+--------------+------------+------------+
+; -1.266 ; FlipflopJK:u2|x      ; FlipflopJK:u2|x      ; FlipflopJK:u2|x ; FlipflopJK:u1|x ; 0.000        ; 1.340      ; 0.367      ;
+; -0.766 ; FlipflopJK:u2|x      ; FlipflopJK:u2|x      ; FlipflopJK:u2|x ; FlipflopJK:u1|x ; -0.500       ; 1.340      ; 0.367      ;
+; 0.215  ; FlipflopJK:u2|xbarra ; FlipflopJK:u2|xbarra ; FlipflopJK:u1|x ; FlipflopJK:u1|x ; 0.000        ; 0.000      ; 0.367      ;
++--------+----------------------+----------------------+-----------------+-----------------+--------------+------------+------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Hold: 'FlipflopJK:u3|x'                                                                                               ;
++-------+----------------------+----------------------+-----------------+-----------------+--------------+------------+------------+
+; Slack ; From Node            ; To Node              ; Launch Clock    ; Latch Clock     ; Relationship ; Clock Skew ; Data Delay ;
++-------+----------------------+----------------------+-----------------+-----------------+--------------+------------+------------+
+; 0.215 ; FlipflopJK:u4|xbarra ; FlipflopJK:u4|xbarra ; FlipflopJK:u3|x ; FlipflopJK:u3|x ; 0.000        ; 0.000      ; 0.367      ;
++-------+----------------------+----------------------+-----------------+-----------------+--------------+------------+------------+
+
+
++-------------------------------------------------------------------------------------------------------+
+; Fast Model Minimum Pulse Width: 'clk'                                                                 ;
++--------+--------------+----------------+------------------+-------+------------+----------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock ; Clock Edge ; Target               ;
++--------+--------------+----------------+------------------+-------+------------+----------------------+
+; -1.380 ; 1.000        ; 2.380          ; Port Rate        ; clk   ; Rise       ; clk                  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Fall       ; FlipflopJK:u1|x      ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Fall       ; FlipflopJK:u1|x      ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Fall       ; FlipflopJK:u1|xbarra ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Fall       ; FlipflopJK:u1|xbarra ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; clk|combout          ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; clk|combout          ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; clk~clkctrl|inclk[0] ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; clk~clkctrl|inclk[0] ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; clk~clkctrl|outclk   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; clk~clkctrl|outclk   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; u1|xbarra|clk        ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; u1|xbarra|clk        ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; u1|x|clk             ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; u1|x|clk             ;
++--------+--------------+----------------+------------------+-------+------------+----------------------+
+
+
++------------------------------------------------------------------------------------------------------------------+
+; Fast Model Minimum Pulse Width: 'FlipflopJK:u1|x'                                                                ;
++--------+--------------+----------------+------------------+-----------------+------------+-----------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock           ; Clock Edge ; Target                ;
++--------+--------------+----------------+------------------+-----------------+------------+-----------------------+
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; FlipflopJK:u1|x ; Fall       ; FlipflopJK:u2|x       ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; FlipflopJK:u1|x ; Fall       ; FlipflopJK:u2|x       ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; FlipflopJK:u1|x ; Fall       ; FlipflopJK:u2|xbarra  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; FlipflopJK:u1|x ; Fall       ; FlipflopJK:u2|xbarra  ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; FlipflopJK:u1|x ; Rise       ; u1|x|regout           ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; FlipflopJK:u1|x ; Rise       ; u1|x|regout           ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; FlipflopJK:u1|x ; Rise       ; u1|x~clkctrl|inclk[0] ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; FlipflopJK:u1|x ; Rise       ; u1|x~clkctrl|inclk[0] ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; FlipflopJK:u1|x ; Rise       ; u1|x~clkctrl|outclk   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; FlipflopJK:u1|x ; Rise       ; u1|x~clkctrl|outclk   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; FlipflopJK:u1|x ; Rise       ; u2|xbarra|clk         ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; FlipflopJK:u1|x ; Rise       ; u2|xbarra|clk         ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; FlipflopJK:u1|x ; Rise       ; u2|x|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; FlipflopJK:u1|x ; Rise       ; u2|x|clk              ;
++--------+--------------+----------------+------------------+-----------------+------------+-----------------------+
+
+
++------------------------------------------------------------------------------------------------------------------+
+; Fast Model Minimum Pulse Width: 'FlipflopJK:u2|x'                                                                ;
++--------+--------------+----------------+------------------+-----------------+------------+-----------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock           ; Clock Edge ; Target                ;
++--------+--------------+----------------+------------------+-----------------+------------+-----------------------+
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; FlipflopJK:u2|x ; Fall       ; FlipflopJK:u3|x       ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; FlipflopJK:u2|x ; Fall       ; FlipflopJK:u3|x       ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; FlipflopJK:u2|x ; Fall       ; FlipflopJK:u3|xbarra  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; FlipflopJK:u2|x ; Fall       ; FlipflopJK:u3|xbarra  ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; FlipflopJK:u2|x ; Rise       ; u2|x|regout           ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; FlipflopJK:u2|x ; Rise       ; u2|x|regout           ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; FlipflopJK:u2|x ; Rise       ; u2|x~clkctrl|inclk[0] ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; FlipflopJK:u2|x ; Rise       ; u2|x~clkctrl|inclk[0] ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; FlipflopJK:u2|x ; Rise       ; u2|x~clkctrl|outclk   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; FlipflopJK:u2|x ; Rise       ; u2|x~clkctrl|outclk   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; FlipflopJK:u2|x ; Rise       ; u3|xbarra|clk         ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; FlipflopJK:u2|x ; Rise       ; u3|xbarra|clk         ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; FlipflopJK:u2|x ; Rise       ; u3|x|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; FlipflopJK:u2|x ; Rise       ; u3|x|clk              ;
++--------+--------------+----------------+------------------+-----------------+------------+-----------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------+
+; Fast Model Minimum Pulse Width: 'FlipflopJK:u3|x'                                                               ;
++--------+--------------+----------------+------------------+-----------------+------------+----------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock           ; Clock Edge ; Target               ;
++--------+--------------+----------------+------------------+-----------------+------------+----------------------+
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; FlipflopJK:u3|x ; Fall       ; FlipflopJK:u4|xbarra ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; FlipflopJK:u3|x ; Fall       ; FlipflopJK:u4|xbarra ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; FlipflopJK:u3|x ; Rise       ; u3|x|regout          ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; FlipflopJK:u3|x ; Rise       ; u3|x|regout          ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; FlipflopJK:u3|x ; Rise       ; u4|xbarra|clk        ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; FlipflopJK:u3|x ; Rise       ; u4|xbarra|clk        ;
++--------+--------------+----------------+------------------+-----------------+------------+----------------------+
+
+
++----------------------------------------------------------------------------+
+; Clock to Output Times                                                      ;
++-----------+-----------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port      ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+-----------------+-------+-------+------------+-----------------+
+; Q1        ; FlipflopJK:u1|x ; 3.173 ; 3.173 ; Fall       ; FlipflopJK:u1|x ;
+; Q2        ; FlipflopJK:u2|x ; 3.206 ; 3.206 ; Fall       ; FlipflopJK:u2|x ;
+; Q3        ; FlipflopJK:u3|x ; 2.297 ; 2.297 ; Fall       ; FlipflopJK:u3|x ;
+; Q0        ; clk             ; 3.673 ; 3.673 ; Fall       ; clk             ;
++-----------+-----------------+-------+-------+------------+-----------------+
+
+
++----------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                              ;
++-----------+-----------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port      ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+-----------------+-------+-------+------------+-----------------+
+; Q1        ; FlipflopJK:u1|x ; 3.173 ; 3.173 ; Fall       ; FlipflopJK:u1|x ;
+; Q2        ; FlipflopJK:u2|x ; 3.206 ; 3.206 ; Fall       ; FlipflopJK:u2|x ;
+; Q3        ; FlipflopJK:u3|x ; 2.297 ; 2.297 ; Fall       ; FlipflopJK:u3|x ;
+; Q0        ; clk             ; 3.673 ; 3.673 ; Fall       ; clk             ;
++-----------+-----------------+-------+-------+------------+-----------------+
+
+
++------------------------------------------------------------------------------+
+; Multicorner Timing Analysis Summary                                          ;
++------------------+-------+--------+----------+---------+---------------------+
+; Clock            ; Setup ; Hold   ; Recovery ; Removal ; Minimum Pulse Width ;
++------------------+-------+--------+----------+---------+---------------------+
+; Worst-case Slack ; 0.379 ; -2.548 ; N/A      ; N/A     ; -1.380              ;
+;  FlipflopJK:u1|x ; 0.379 ; -2.010 ; N/A      ; N/A     ; -0.500              ;
+;  FlipflopJK:u2|x ; 0.379 ; -2.057 ; N/A      ; N/A     ; -0.500              ;
+;  FlipflopJK:u3|x ; 0.379 ; 0.215  ; N/A      ; N/A     ; -0.500              ;
+;  clk             ; 0.379 ; -2.548 ; N/A      ; N/A     ; -1.380              ;
+; Design-wide TNS  ; 0.0   ; -6.615 ; 0.0      ; 0.0     ; -8.38               ;
+;  FlipflopJK:u1|x ; 0.000 ; -2.010 ; N/A      ; N/A     ; -2.000              ;
+;  FlipflopJK:u2|x ; 0.000 ; -2.057 ; N/A      ; N/A     ; -2.000              ;
+;  FlipflopJK:u3|x ; 0.000 ; 0.000  ; N/A      ; N/A     ; -1.000              ;
+;  clk             ; 0.000 ; -2.548 ; N/A      ; N/A     ; -3.380              ;
++------------------+-------+--------+----------+---------+---------------------+
+
+
++----------------------------------------------------------------------------+
+; Clock to Output Times                                                      ;
++-----------+-----------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port      ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+-----------------+-------+-------+------------+-----------------+
+; Q1        ; FlipflopJK:u1|x ; 5.572 ; 5.572 ; Fall       ; FlipflopJK:u1|x ;
+; Q2        ; FlipflopJK:u2|x ; 5.611 ; 5.611 ; Fall       ; FlipflopJK:u2|x ;
+; Q3        ; FlipflopJK:u3|x ; 4.238 ; 4.238 ; Fall       ; FlipflopJK:u3|x ;
+; Q0        ; clk             ; 6.398 ; 6.398 ; Fall       ; clk             ;
++-----------+-----------------+-------+-------+------------+-----------------+
+
+
++----------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                              ;
++-----------+-----------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port      ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+-----------------+-------+-------+------------+-----------------+
+; Q1        ; FlipflopJK:u1|x ; 3.173 ; 3.173 ; Fall       ; FlipflopJK:u1|x ;
+; Q2        ; FlipflopJK:u2|x ; 3.206 ; 3.206 ; Fall       ; FlipflopJK:u2|x ;
+; Q3        ; FlipflopJK:u3|x ; 2.297 ; 2.297 ; Fall       ; FlipflopJK:u3|x ;
+; Q0        ; clk             ; 3.673 ; 3.673 ; Fall       ; clk             ;
++-----------+-----------------+-------+-------+------------+-----------------+
+
+
++-------------------------------------------------------------------------------+
+; Setup Transfers                                                               ;
++-----------------+-----------------+----------+----------+----------+----------+
+; From Clock      ; To Clock        ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++-----------------+-----------------+----------+----------+----------+----------+
+; clk             ; clk             ; 0        ; 0        ; 0        ; 1        ;
+; FlipflopJK:u1|x ; clk             ; 0        ; 0        ; 1        ; 1        ;
+; FlipflopJK:u1|x ; FlipflopJK:u1|x ; 0        ; 0        ; 0        ; 1        ;
+; FlipflopJK:u2|x ; FlipflopJK:u1|x ; 0        ; 0        ; 1        ; 1        ;
+; FlipflopJK:u2|x ; FlipflopJK:u2|x ; 0        ; 0        ; 0        ; 1        ;
+; FlipflopJK:u3|x ; FlipflopJK:u2|x ; 0        ; 0        ; 1        ; 1        ;
+; FlipflopJK:u3|x ; FlipflopJK:u3|x ; 0        ; 0        ; 0        ; 1        ;
++-----------------+-----------------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++-------------------------------------------------------------------------------+
+; Hold Transfers                                                                ;
++-----------------+-----------------+----------+----------+----------+----------+
+; From Clock      ; To Clock        ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++-----------------+-----------------+----------+----------+----------+----------+
+; clk             ; clk             ; 0        ; 0        ; 0        ; 1        ;
+; FlipflopJK:u1|x ; clk             ; 0        ; 0        ; 1        ; 1        ;
+; FlipflopJK:u1|x ; FlipflopJK:u1|x ; 0        ; 0        ; 0        ; 1        ;
+; FlipflopJK:u2|x ; FlipflopJK:u1|x ; 0        ; 0        ; 1        ; 1        ;
+; FlipflopJK:u2|x ; FlipflopJK:u2|x ; 0        ; 0        ; 0        ; 1        ;
+; FlipflopJK:u3|x ; FlipflopJK:u2|x ; 0        ; 0        ; 1        ; 1        ;
+; FlipflopJK:u3|x ; FlipflopJK:u3|x ; 0        ; 0        ; 0        ; 1        ;
++-----------------+-----------------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
+---------------
+; Report TCCS ;
+---------------
+No dedicated SERDES Transmitter circuitry present in device or used in design
+
+
+---------------
+; Report RSKM ;
+---------------
+No dedicated SERDES Receiver circuitry present in device or used in design
+
+
++------------------------------------------------+
+; Unconstrained Paths                            ;
++---------------------------------+-------+------+
+; Property                        ; Setup ; Hold ;
++---------------------------------+-------+------+
+; Illegal Clocks                  ; 0     ; 0    ;
+; Unconstrained Clocks            ; 0     ; 0    ;
+; Unconstrained Input Ports       ; 0     ; 0    ;
+; Unconstrained Input Port Paths  ; 0     ; 0    ;
+; Unconstrained Output Ports      ; 4     ; 4    ;
+; Unconstrained Output Port Paths ; 4     ; 4    ;
++---------------------------------+-------+------+
+
+
++------------------------------------+
+; TimeQuest Timing Analyzer Messages ;
++------------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit TimeQuest Timing Analyzer
+    Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+    Info: Processing started: Fri Mar 19 14:55:15 2021
+Info: Command: quartus_sta Cont_Assinc_Decres -c Cont_Assinc_Decres
+Info: qsta_default_script.tcl version: #1
+Warning (20028): Parallel compilation is not licensed and has been disabled
+Info (21077): Low junction temperature is 0 degrees C
+Info (21077): High junction temperature is 85 degrees C
+Critical Warning (332012): Synopsys Design Constraints File file not found: 'Cont_Assinc_Decres.sdc'. A Synopsys Design Constraints File is required by the TimeQuest Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
+Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
+Info (332105): Deriving Clocks
+    Info (332105): create_clock -period 1.000 -name clk clk
+    Info (332105): create_clock -period 1.000 -name FlipflopJK:u1|x FlipflopJK:u1|x
+    Info (332105): create_clock -period 1.000 -name FlipflopJK:u2|x FlipflopJK:u2|x
+    Info (332105): create_clock -period 1.000 -name FlipflopJK:u3|x FlipflopJK:u3|x
+Info: Found TIMEQUEST_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
+Info: Analyzing Slow Model
+Info (332146): Worst-case setup slack is 0.379
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):     0.379         0.000 FlipflopJK:u1|x 
+    Info (332119):     0.379         0.000 FlipflopJK:u2|x 
+    Info (332119):     0.379         0.000 FlipflopJK:u3|x 
+    Info (332119):     0.379         0.000 clk 
+Critical Warning (332148): Timing requirements not met
+Info (332146): Worst-case hold slack is -2.548
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -2.548        -2.548 clk 
+    Info (332119):    -2.057        -2.057 FlipflopJK:u2|x 
+    Info (332119):    -2.010        -2.010 FlipflopJK:u1|x 
+    Info (332119):     0.391         0.000 FlipflopJK:u3|x 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -1.380
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -1.380        -3.380 clk 
+    Info (332119):    -0.500        -2.000 FlipflopJK:u1|x 
+    Info (332119):    -0.500        -2.000 FlipflopJK:u2|x 
+    Info (332119):    -0.500        -1.000 FlipflopJK:u3|x 
+Info (332001): The selected device family is not supported by the report_metastability command.
+Info: Analyzing Fast Model
+Info (332146): Worst-case setup slack is 0.665
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):     0.665         0.000 FlipflopJK:u1|x 
+    Info (332119):     0.665         0.000 FlipflopJK:u2|x 
+    Info (332119):     0.665         0.000 FlipflopJK:u3|x 
+    Info (332119):     0.665         0.000 clk 
+Critical Warning (332148): Timing requirements not met
+Info (332146): Worst-case hold slack is -1.591
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -1.591        -1.591 clk 
+    Info (332119):    -1.300        -1.300 FlipflopJK:u2|x 
+    Info (332119):    -1.266        -1.266 FlipflopJK:u1|x 
+    Info (332119):     0.215         0.000 FlipflopJK:u3|x 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -1.380
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -1.380        -3.380 clk 
+    Info (332119):    -0.500        -2.000 FlipflopJK:u1|x 
+    Info (332119):    -0.500        -2.000 FlipflopJK:u2|x 
+    Info (332119):    -0.500        -1.000 FlipflopJK:u3|x 
+Info (332001): The selected device family is not supported by the report_metastability command.
+Info (332102): Design is not fully constrained for setup requirements
+Info (332102): Design is not fully constrained for hold requirements
+Info: Quartus II 64-Bit TimeQuest Timing Analyzer was successful. 0 errors, 4 warnings
+    Info: Peak virtual memory: 4563 megabytes
+    Info: Processing ended: Fri Mar 19 14:55:22 2021
+    Info: Elapsed time: 00:00:07
+    Info: Total CPU time (on all processors): 00:00:04
+
+
