@@ -1,0 +1,96 @@
+ENTITY MaqCinema IS
+PORT (reset, clk, codV, peso, pip, cancel_pip, pip_vendida, serv, cancel_serv, serv_completo, fim_filme : IN BIT;
+			Cod, Cpip, Cser, LibSala, LibCadeira : OUT BIT);
+END;
+
+
+ARCHITECTURE behavior OF MaqCinema IS
+
+TYPE estado IS (Init, Compra_ingresso, Espera_entrada, Libera_Entrada, Espera_cadeira, Destrava_cadeira, Trava_cadeira, Assiste_filme, Chama_Servico, Chama_pipoca);
+SIGNAL estado_atual : estado;
+
+BEGIN
+
+PROCESS(codV, peso, pip, cancel_pip, pip_vendida, serv, cancel_serv, serv_completo, fim_filme)
+BEGIN
+	IF(reset = '1') THEN
+	estado_atual <= Init; --Estado inicial
+	ELSIF(clk'EVENT and clk='1') THEN
+	
+	CASE estado_atual IS
+		WHEN Init => estado_atual <= Compra_ingresso;
+		
+		WHEN Compra_ingresso => estado_atual <= Espera_entrada
+		
+		WHEN Espera_entrada =>
+			IF(CodV='0') THEN
+				estado_atual <= Espera_entrada;
+			ELSE
+				estado_atual <= Libera_Entrada;
+			END IF;
+			
+		WHEN Libera_Entrada => estado_atual <= Espera_cadeira;
+		
+		WHEN Espera_cadeira =>
+			IF(codV='0') THEN
+				estado_atual <= Espera_cadeira;
+			ELSE
+				estado_atual <= Destrava_cadeira;
+			END IF;
+		
+		WHEN Destrava_cadeira => 
+			IF (peso = '0') THEN
+				estado_atual <= Destrava_cadeira;
+			ELSE
+				estado_atual <= Assiste_filme;
+			END IF;
+		
+		WHEN Assiste_filme => 
+			IF(pip = '0' AND serv = '0') THEN
+				estado_atual <= Assiste_filme;
+			ELSIF (serv = '1') THEN
+				estado_atual <= Chama_Servico;
+			ELSIF (pip = '1') THEN
+				estado_atual <= Chama_pipoca;
+			ELSIF (peso = '0') THEN
+				estado_atual <= Trava_cadeira;
+			END IF;
+		
+		WHEN Chama_Servico =>
+			IF(serv_completo = '0') THEN
+				estado_atual <= Chama_Servico;
+			ELSIF(serv_completo='1' OR cancel_serv ='1') THEN
+				estado_atual <= Assiste_filme;
+			END IF;
+		
+		WHEN Chama_pipoca => 
+			IF(pip_vendida = '0') THEN
+				estado_atual <= Chama_pipoca;
+			ELSIF(pip_vendida = '1' OR cancel_pip = '1') THEN
+				estado_atual <= Assiste_filme;
+			END IF;
+		
+		WHEN Trava_cadeira =>
+			IF (fim_filme = '1') THEN
+				estado_atual <= Init;
+			ELSE
+				estado_atual <= Espera_cadeira;
+			END IF;
+		
+	END CASE;
+	
+	
+	END IF;
+
+
+END PROCESS;
+
+WITH estado_atual SELECT
+	Cod <= '0' WHEN Init, '1' WHEN Compra_ingresso;
+	Cpip <= '1'WHEN Cpip, '0' WHEN Assiste_filme;
+	Cser <= '1' WHEN Cser, '0'WHEN Assiste_filme;
+	LibSala <= '0'WHEN Init, '1' WHEN Libera_Entrada;
+	LibCadeira <= '1'WHEN Destrava_cadeira, '0'WHEN Trava_cadeira;
+	
+
+END;
