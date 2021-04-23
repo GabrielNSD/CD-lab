@@ -115,8 +115,6 @@ WITH estado_atual SELECT
 
 WITH estado_atual SELECT
 	LibCadeira <= '1'WHEN Destrava_cadeira,
-						'0' WHEN others;
-
-					
+						'0' WHEN others;					
 
 END;
